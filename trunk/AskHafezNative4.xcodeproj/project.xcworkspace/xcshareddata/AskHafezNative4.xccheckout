@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D27C368D-5E99-42F9-B7CB-066DC0F0412C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AskHafezNative4</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</key>
+		<string>https://darooz.unfuddle.com/svn/darooz_askhafez</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/AskHafezNative4.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</string>
+			<key>IDESourceControlWCCName</key>
+			<string>darooz_askhafez</string>
+		</dict>
+	</array>
+</dict>
+</plist>
