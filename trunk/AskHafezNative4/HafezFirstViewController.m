@@ -9,8 +9,11 @@
 #include <stdlib.h>
 #import "HafezFirstViewController.h"
 #import "CommonUtils.h"
-#import "GANTracker.h"
 #import "GhazalViewController.h"
+#import "GAIDictionaryBuilder.h"
+
+#import "GADBannerView.h"
+#import "GADRequest.h"
 
 @implementation HafezFirstViewController
 
@@ -155,7 +158,7 @@
     }
     m_scrollViews = viewsArray;
     
-    [[GANTracker sharedTracker] trackPageview:[NSString stringWithFormat:@"Ghazal-%d", ghazalNumber] withError:nil];
+    self.screenName = [NSString stringWithFormat:@"Ghazal-%d", ghazalNumber];
 }
 
 - (void) calcGhazalCnt
@@ -231,11 +234,11 @@
 
     m_scrollViews = [[NSArray alloc] initWithObjects:second,third,forth, nil];
 
-    [[GANTracker sharedTracker] trackEvent:@"Ghazals"
-                                    action:@"Scroll"
-                                     label:@"Right"
-                                     value:-1
-                                 withError:nil];
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Ghazals"
+                                                          action:@"Scroll"
+                                                           label:@"Right"
+                                                           value:nil] build]];
 }
 
 - (void) scrollLeft
@@ -262,11 +265,11 @@
     
     m_scrollViews = [[NSArray alloc] initWithObjects:zeros,first,second, nil];
 
-    [[GANTracker sharedTracker] trackEvent:@"Ghazals"
-                                    action:@"Scroll"
-                                     label:@"Left"
-                                     value:-1
-                                 withError:nil];
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Ghazals"
+                                                          action:@"Scroll"
+                                                           label:@"Left"
+                                                           value:nil] build]];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -319,6 +322,19 @@
     [[self view] addSubview:srcMainBrowser];
 }
 
+- (void) initAd
+{
+    self.bannerView.adUnitID = @"ca-app-pub-1704811847384033/7356093506";
+    
+    self.bannerView.rootViewController = self;
+    
+    GADRequest *request = [GADRequest request];
+    // Enable test ads on simulators.
+    request.testDevices = @[ GAD_SIMULATOR_ID ];
+    [self.bannerView loadRequest:request];
+    
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -328,6 +344,8 @@
         return;
     }
  
+    [self initAd];
+    
     UIInterfaceOrientation or = [[UIDevice currentDevice] orientation];
     if (or== UIInterfaceOrientationPortrait || or == UIInterfaceOrientationPortraitUpsideDown) {
         currOrtientation = UIInterfaceOrientationPortrait;

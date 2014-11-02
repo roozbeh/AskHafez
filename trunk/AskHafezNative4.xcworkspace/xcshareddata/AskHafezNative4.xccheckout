@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E1595BB9-8056-42D9-B691-FD903F98C743</string>
+	<string>B773BE33-7613-410C-8824-59496EBE59FC</string>
 	<key>IDESourceControlProjectName</key>
 	<string>AskHafezNative4</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -20,12 +20,22 @@
 		<key>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</key>
 		<string>../..</string>
 	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/roozbeh2/askhafez.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</string>
+			<key>IDESourceControlWCCName</key>
+			<string>darooz_askhafez</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.subversion</string>

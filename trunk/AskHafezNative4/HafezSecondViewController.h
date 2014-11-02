@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAI.h"
 
-@interface HafezSecondViewController : UIViewController
+@interface HafezSecondViewController : GAITrackedViewController
 @property (strong, nonatomic) IBOutlet UILabel *lblPersianDesc;
 @property (strong, nonatomic) IBOutlet UILabel *lblEnglishDesc;
 - (IBAction)cmdFaal:(id)sender;

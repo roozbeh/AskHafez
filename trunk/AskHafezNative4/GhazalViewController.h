@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAI.h"
 
-@interface GhazalViewController : UIViewController
+@interface GhazalViewController : GAITrackedViewController
 
 @property NSArray *faLabelArray;
 @property NSArray *enLabelArray;

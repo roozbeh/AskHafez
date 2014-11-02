@@ -7,6 +7,7 @@
 //
 
 #import "HafezAppDelegate.h"
+#import "GAI.h"
 
 @implementation HafezAppDelegate
 
@@ -14,41 +15,20 @@
 
 static NSString *const kAnalyticsAccountId = @"UA-36120510-1";
 // Dispatch period in seconds.
-static const NSInteger kDispatchPeriodSeconds = 10;
+static const NSInteger kDispatchPeriodSeconds = 20;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[GANTracker sharedTracker] startTrackerWithAccountID:kAnalyticsAccountId
-                                           dispatchPeriod:kDispatchPeriodSeconds
-                                                 delegate:self];
-    
-    NSError *error = nil;
-    if (![[GANTracker sharedTracker] setCustomVariableAtIndex:1
-                                                         name:@"iOS1"
-                                                        value:@"iv1"
-                                                    withError:&error]) {
-        NSLog(@"setCustomVariableAtIndex failed: %@", error);
-    }
-    
-    
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [GAI sharedInstance].dispatchInterval = kDispatchPeriodSeconds;
+    [[GAI sharedInstance] trackerWithTrackingId:kAnalyticsAccountId];
+
     // Override point for customization after application launch.
     return YES;
 }
 
 #pragma mark -
-#pragma mark GANTrackerDelegate methods
-
-- (void)hitDispatched:(NSString *)hitString {
-    NSLog(@"Hit Dispatched: %@", hitString);
-}
-
-- (void)trackerDispatchDidComplete:(GANTracker *)tracker
-                  eventsDispatched:(NSUInteger)hitsDispatched
-              eventsFailedDispatch:(NSUInteger)hitsFailedDispatch {
-    NSLog(@"Dispatch completed (%u OK, %u failed)",
-          hitsDispatched, hitsFailedDispatch);
-}
 
 
 - (void)applicationWillResignActive:(UIApplication *)application

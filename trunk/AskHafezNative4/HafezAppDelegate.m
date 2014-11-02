@@ -11,6 +11,7 @@
 #import "HafezFirstViewController.h"
 #import "HafezSecondViewController.h"
 #import "SearchViewController.h"
+#import "GAI.h"
 
 @implementation HafezAppDelegate
 
@@ -24,18 +25,9 @@ static const NSInteger kDispatchPeriodSeconds = 10;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    
-    [[GANTracker sharedTracker] startTrackerWithAccountID:kAnalyticsAccountId
-                                           dispatchPeriod:kDispatchPeriodSeconds
-                                                 delegate:self];
-    
-    NSError *error = nil;
-    if (![[GANTracker sharedTracker] setCustomVariableAtIndex:1
-                                                         name:@"iOS1"
-                                                        value:@"iv1"
-                                                    withError:&error]) {
-        NSLog(@"setCustomVariableAtIndex failed: %@", error);
-    }
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [GAI sharedInstance].dispatchInterval = kDispatchPeriodSeconds;
+    [[GAI sharedInstance] trackerWithTrackingId:kAnalyticsAccountId];
     
 //    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    // Override point for customization after application launch.
@@ -51,18 +43,6 @@ static const NSInteger kDispatchPeriodSeconds = 10;
 
 #pragma mark -
 #pragma mark GANTrackerDelegate methods
-
-- (void)hitDispatched:(NSString *)hitString {
-    NSLog(@"Hit Dispatched: %@", hitString);
-}
-
-- (void)trackerDispatchDidComplete:(GANTracker *)tracker
-                  eventsDispatched:(NSUInteger)hitsDispatched
-              eventsFailedDispatch:(NSUInteger)hitsFailedDispatch {
-    NSLog(@"Dispatch completed (%u OK, %u failed)",
-          hitsDispatched, hitsFailedDispatch);
-}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

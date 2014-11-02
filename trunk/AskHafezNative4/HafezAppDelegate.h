@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GANTracker.h"
 
-
-@interface HafezAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate,GANTrackerDelegate>
+@interface HafezAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

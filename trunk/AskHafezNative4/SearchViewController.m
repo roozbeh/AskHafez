@@ -9,7 +9,7 @@
 #import "SearchViewController.h"
 #import "HafezFirstViewController.h"
 #import "GhazalCell.h"
-#import "GANTracker.h"
+#import "GAIDictionaryBuilder.h"
 
 @implementation SearchViewController
 @synthesize searchBar;
@@ -45,7 +45,10 @@
     [searchBar setDelegate:self];
     [tblView setDelegate:self];
     [tblView setDataSource:self];
-    m_resultArray = [[NSArray alloc] init];}
+    m_resultArray = [[NSArray alloc] init];
+
+    self.screenName = @"/search";    
+}
 
 - (void)viewDidUnload
 {
@@ -98,11 +101,12 @@
     [nav popToRootViewControllerAnimated:NO];
     [[self tabBarController] setSelectedIndex:0];
     
-    [[GANTracker sharedTracker] trackEvent:@"Button"
-                                    action:@"Click"
-                                     label:@"SearchItem"
-                                     value:-1
-                                 withError:nil];
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Faal"
+                                                          action:@"Click"
+                                                           label:@"SearchItem"
+                                                           value:nil] build]];
+    
 }
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *) srchBar

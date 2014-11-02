@@ -8,7 +8,8 @@
 
 #import "HafezSecondViewController.h"
 #import "HafezFirstViewController.h"
-#import "GANTracker.h"
+#import "GAIDictionaryBuilder.h"
+
 
 @implementation HafezSecondViewController
 @synthesize lblPersianDesc;
@@ -50,6 +51,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.screenName = @"/faal";
     
     [self manageOrientation: [[UIDevice currentDevice] orientation]];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -92,12 +94,11 @@
 }
 
 - (IBAction)cmdFaal:(id)sender {
-    [[GANTracker sharedTracker] trackEvent:@"Button"
-                                    action:@"Click"
-                                     label:@"Faal"
-                                     value:-1
-                                 withError:nil];
-    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Button"
+                                                          action:@"Click"
+                                                           label:@"Faal"
+                                                           value:nil] build]];
     HafezFirstViewController *firstView =  [[[[self.tabBarController viewControllers] objectAtIndex:0] viewControllers] objectAtIndex:0];
 //    HafezFirstViewController *firstView = [[[self tabBarController] viewControllers] objectAtIndex:0];
     [firstView randomizeView];

@@ -8,7 +8,7 @@
 
 #import "GhazalViewController.h"
 #import <Social/Social.h>
-#import "GANTracker.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface GhazalViewController ()
 
@@ -32,6 +32,7 @@
     
     [self fillGhazalContainerView];
     _lblGhazamNumber.text = [NSString stringWithFormat:@"%d", (_ghazalNumber+1)];
+    self.screenName = [NSString stringWithFormat:@"/iphone/Ghazal-%d", _ghazalNumber] ;
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,11 +84,11 @@
 
     NSMutableString *ghazalText = [[NSMutableString alloc] init];
 
-    [[GANTracker sharedTracker] trackEvent:@"Button"
-                                    action:@"Click"
-                                     label:@"FacebookShare"
-                                     value:-1
-                                 withError:nil];
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Faal"
+                                                          action:@"Click"
+                                                           label:@"FacebookShare"
+                                                           value:nil] build]];
     
     for (int i=0; i < [_faLabelArray count]; i++) {
         [ghazalText appendString:[_faLabelArray objectAtIndex:i]];

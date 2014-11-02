@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAI.h"
 
-@interface SearchViewController : UIViewController<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface SearchViewController : GAITrackedViewController<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *m_resultArray;
 }

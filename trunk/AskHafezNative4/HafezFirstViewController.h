@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
 #import "iCarousel.h"
+#import "GAI.h"
 
-@interface HafezFirstViewController : UIViewController<UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate>
+@class GADBannerView;
+
+@interface HafezFirstViewController : GAITrackedViewController<UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate>
 {
     sqlite3 *m_database;
     int m_ghzalCnt;
@@ -28,4 +31,5 @@
 - (sqlite3*) getDB;
 - (void) navigateToView:(int) ghazal_number;
 @property (weak, nonatomic) IBOutlet iCarousel *carousel;
+@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
 @end
