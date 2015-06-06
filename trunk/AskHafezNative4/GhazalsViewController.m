@@ -7,15 +7,16 @@
 //
 
 #include <stdlib.h>
-#import "HafezFirstViewController.h"
+#import "GhazalsViewController.h"
 #import "CommonUtils.h"
 #import "GhazalViewController.h"
 #import "GAIDictionaryBuilder.h"
 
-#import "GADBannerView.h"
-#import "GADRequest.h"
+//#import "GADBannerView.h"
+//#import "GADRequest.h"
+@import GoogleMobileAds;
 
-@implementation HafezFirstViewController
+@implementation GhazalsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -324,13 +325,13 @@
 
 - (void) initAd
 {
-    self.bannerView.adUnitID = @"ca-app-pub-1704811847384033/7356093506";
+    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";//[[[NSBundle mainBundle] infoDictionary] valueForKey:@"AdMobs"];
     
     self.bannerView.rootViewController = self;
     
     GADRequest *request = [GADRequest request];
     // Enable test ads on simulators.
-    request.testDevices = @[ GAD_SIMULATOR_ID ];
+//    request.testDevices = @[ GAD_SIMULATOR_ID ];
     [self.bannerView loadRequest:request];
     
 }

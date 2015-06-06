@@ -8,8 +8,8 @@
 
 #import "HafezAppDelegate.h"
 
-#import "HafezFirstViewController.h"
-#import "HafezSecondViewController.h"
+#import "GhazalsViewController.h"
+#import "FaalPhoneViewController.h"
 #import "SearchViewController.h"
 #import "GAI.h"
 

@@ -7,7 +7,7 @@
 //
 
 #import "SearchViewController.h"
-#import "HafezFirstViewController.h"
+#import "GhazalsViewController.h"
 #import "GhazalCell.h"
 #import "GAIDictionaryBuilder.h"
 
@@ -95,7 +95,7 @@
     NSNumber *ghazal_number = [[m_resultArray objectAtIndex:index] valueForKey:@"index"];
     
 //    HafezFirstViewController *firstView = [[[self tabBarController] viewControllers] objectAtIndex:0];
-    HafezFirstViewController *firstView =  [[[[self.tabBarController viewControllers] objectAtIndex:0] viewControllers] objectAtIndex:0];
+    GhazalsViewController *firstView =  [[[[self.tabBarController viewControllers] objectAtIndex:0] viewControllers] objectAtIndex:0];
     [firstView navigateToView:[ghazal_number intValue]];
     UINavigationController *nav = [[self.tabBarController viewControllers] objectAtIndex:0];
     [nav popToRootViewControllerAnimated:NO];
@@ -114,7 +114,7 @@
     NSLog(@"search bar clicked");
     
 //    HafezFirstViewController *firstView = [[[self tabBarController] viewControllers] objectAtIndex:0];
-    HafezFirstViewController *firstView =  [[[[self.tabBarController viewControllers] objectAtIndex:0] viewControllers] objectAtIndex:0];
+    GhazalsViewController *firstView =  [[[[self.tabBarController viewControllers] objectAtIndex:0] viewControllers] objectAtIndex:0];
     
     sqlite3* database = [firstView getDB];
     
@@ -178,7 +178,7 @@
 }
 
 - (NSString *) loadMesraWithId: (int) mesra_id {
-    HafezFirstViewController *firstView =  [[[[self.tabBarController viewControllers] objectAtIndex:0]viewControllers] objectAtIndex:0];
+    GhazalsViewController *firstView =  [[[[self.tabBarController viewControllers] objectAtIndex:0]viewControllers] objectAtIndex:0];
     sqlite3* database = [firstView getDB];
     NSString *ret = @"";
     

@@ -13,7 +13,7 @@
 
 @class GADBannerView;
 
-@interface HafezFirstViewController : GAITrackedViewController<UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate>
+@interface GhazalsViewController : GAITrackedViewController<UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate>
 {
     sqlite3 *m_database;
     int m_ghzalCnt;

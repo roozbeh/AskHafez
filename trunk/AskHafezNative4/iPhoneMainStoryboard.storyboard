@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j4I-ZR-Xp9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j4I-ZR-Xp9">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Ghazal غزل-->
@@ -24,7 +24,7 @@
         <!--Ghazal غزل-->
         <scene sceneID="7X2-bn-Xmk">
             <objects>
-                <viewController id="Fwd-Ea-Ccy" customClass="HafezFirstViewController" sceneMemberID="viewController">
+                <viewController id="Fwd-Ea-Ccy" customClass="GhazalsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YL5-jj-9mt"/>
                         <viewControllerLayoutGuide type="bottom" id="OMO-Oa-wID"/>
@@ -191,7 +191,7 @@
         <!--Faal فال-->
         <scene sceneID="9AU-wH-iRx">
             <objects>
-                <viewController id="uMX-c4-5aw" customClass="HafezSecondViewController" sceneMemberID="viewController">
+                <viewController id="uMX-c4-5aw" customClass="FaalPhoneViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QFE-15-nzA"/>
                         <viewControllerLayoutGuide type="bottom" id="GmZ-Ih-iO4"/>
@@ -226,17 +226,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSg-nv-znc" userLabel="BannerView" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="469" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aGx-SM-2gk" secondAttribute="trailing" id="6bE-a8-1o7"/>
                             <constraint firstItem="aGx-SM-2gk" firstAttribute="top" secondItem="smA-9E-oWZ" secondAttribute="top" id="8HS-Xw-idY"/>
+                            <constraint firstItem="GmZ-Ih-iO4" firstAttribute="top" secondItem="LSg-nv-znc" secondAttribute="bottom" id="dWG-MH-REd"/>
                             <constraint firstItem="GmZ-Ih-iO4" firstAttribute="top" secondItem="aGx-SM-2gk" secondAttribute="bottom" id="dld-VL-jIu"/>
                             <constraint firstItem="aGx-SM-2gk" firstAttribute="leading" secondItem="smA-9E-oWZ" secondAttribute="leading" id="tCK-dY-O0V"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Faal فال" image="dice.png" id="Zo0-pO-nR7"/>
+                    <connections>
+                        <outlet property="bannerView" destination="LSg-nv-znc" id="9Nn-CB-foZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpM-Fj-cmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

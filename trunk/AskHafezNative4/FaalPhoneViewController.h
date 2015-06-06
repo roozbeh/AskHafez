@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "GAI.h"
 
-@interface HafezSecondViewController : GAITrackedViewController
+@class GADBannerView;
+
+@interface FaalPhoneViewController : GAITrackedViewController
 @property (strong, nonatomic) IBOutlet UILabel *lblPersianDesc;
 @property (strong, nonatomic) IBOutlet UILabel *lblEnglishDesc;
 - (IBAction)cmdFaal:(id)sender;
 @property (strong, nonatomic) IBOutlet UIButton *btnFaal;
+@property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
 
 @end
