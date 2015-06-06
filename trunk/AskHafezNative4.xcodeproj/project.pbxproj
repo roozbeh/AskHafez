@@ -62,14 +62,14 @@
 		BDF5DC0416477AAE00A731A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC0216477AAE00A731A1 /* InfoPlist.strings */; };
 		BDF5DC0616477AAE00A731A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC0516477AAE00A731A1 /* main.m */; };
 		BDF5DC0A16477AAE00A731A1 /* HafezAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC0916477AAE00A731A1 /* HafezAppDelegate.m */; };
-		BDF5DC0D16477AAE00A731A1 /* HafezFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC0C16477AAE00A731A1 /* HafezFirstViewController.m */; };
+		BDF5DC0D16477AAE00A731A1 /* GhazalsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC0C16477AAE00A731A1 /* GhazalsViewController.m */; };
 		BDF5DC0F16477AAE00A731A1 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC0E16477AAE00A731A1 /* first.png */; };
 		BDF5DC1116477AAE00A731A1 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1016477AAE00A731A1 /* first@2x.png */; };
-		BDF5DC1416477AAE00A731A1 /* HafezSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC1316477AAE00A731A1 /* HafezSecondViewController.m */; };
+		BDF5DC1416477AAE00A731A1 /* FaalPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC1316477AAE00A731A1 /* FaalPhoneViewController.m */; };
 		BDF5DC1616477AAE00A731A1 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1516477AAE00A731A1 /* second.png */; };
 		BDF5DC1816477AAE00A731A1 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1716477AAE00A731A1 /* second@2x.png */; };
-		BDF5DC1B16477AAE00A731A1 /* HafezFirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1916477AAE00A731A1 /* HafezFirstViewController.xib */; };
-		BDF5DC1E16477AAF00A731A1 /* HafezSecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1C16477AAF00A731A1 /* HafezSecondViewController.xib */; };
+		BDF5DC1B16477AAE00A731A1 /* GhazalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1916477AAE00A731A1 /* GhazalsViewController.xib */; };
+		BDF5DC1E16477AAF00A731A1 /* FaalPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1C16477AAF00A731A1 /* FaalPhoneViewController.xib */; };
 		BDF5DC2616477AAF00A731A1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DC2516477AAF00A731A1 /* SenTestingKit.framework */; };
 		BDF5DC2716477AAF00A731A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBF916477AAE00A731A1 /* UIKit.framework */; };
 		BDF5DC2816477AAF00A731A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBFB16477AAE00A731A1 /* Foundation.framework */; };
@@ -86,6 +86,7 @@
 		BDF5DC5416477D2700A731A1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC5216477D2700A731A1 /* SearchViewController.m */; };
 		BDF5DC5516477D2700A731A1 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC5316477D2700A731A1 /* SearchViewController.xib */; };
 		BDF5DC5816477F2E00A731A1 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC5716477F2E00A731A1 /* CommonUtils.m */; };
+		BDF9B5121AA15AAF00CEA7F5 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9B5111AA15AAF00CEA7F5 /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,16 +186,16 @@
 		BDF5DC0716477AAE00A731A1 /* AskHafezNative4-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AskHafezNative4-Prefix.pch"; sourceTree = "<group>"; };
 		BDF5DC0816477AAE00A731A1 /* HafezAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HafezAppDelegate.h; sourceTree = "<group>"; };
 		BDF5DC0916477AAE00A731A1 /* HafezAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HafezAppDelegate.m; sourceTree = "<group>"; };
-		BDF5DC0B16477AAE00A731A1 /* HafezFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HafezFirstViewController.h; sourceTree = "<group>"; };
-		BDF5DC0C16477AAE00A731A1 /* HafezFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HafezFirstViewController.m; sourceTree = "<group>"; };
+		BDF5DC0B16477AAE00A731A1 /* GhazalsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GhazalsViewController.h; sourceTree = "<group>"; };
+		BDF5DC0C16477AAE00A731A1 /* GhazalsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GhazalsViewController.m; sourceTree = "<group>"; };
 		BDF5DC0E16477AAE00A731A1 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = first.png; path = AskHafezNative4/first.png; sourceTree = "<group>"; };
 		BDF5DC1016477AAE00A731A1 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "first@2x.png"; path = "AskHafezNative4/first@2x.png"; sourceTree = "<group>"; };
-		BDF5DC1216477AAE00A731A1 /* HafezSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HafezSecondViewController.h; sourceTree = "<group>"; };
-		BDF5DC1316477AAE00A731A1 /* HafezSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HafezSecondViewController.m; sourceTree = "<group>"; };
+		BDF5DC1216477AAE00A731A1 /* FaalPhoneViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaalPhoneViewController.h; sourceTree = "<group>"; };
+		BDF5DC1316477AAE00A731A1 /* FaalPhoneViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaalPhoneViewController.m; sourceTree = "<group>"; };
 		BDF5DC1516477AAE00A731A1 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = second.png; path = AskHafezNative4/second.png; sourceTree = "<group>"; };
 		BDF5DC1716477AAE00A731A1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "AskHafezNative4/second@2x.png"; sourceTree = "<group>"; };
-		BDF5DC1A16477AAE00A731A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HafezFirstViewController.xib; sourceTree = "<group>"; };
-		BDF5DC1D16477AAF00A731A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/HafezSecondViewController.xib; sourceTree = "<group>"; };
+		BDF5DC1A16477AAE00A731A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GhazalsViewController.xib; sourceTree = "<group>"; };
+		BDF5DC1D16477AAF00A731A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FaalPhoneViewController.xib; sourceTree = "<group>"; };
 		BDF5DC2416477AAF00A731A1 /* AskHafezNative4Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AskHafezNative4Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF5DC2516477AAF00A731A1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		BDF5DC2D16477AB000A731A1 /* AskHafezNative4Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AskHafezNative4Tests-Info.plist"; sourceTree = "<group>"; };
@@ -214,6 +215,8 @@
 		BDF5DC5316477D2700A731A1 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		BDF5DC5616477F2E00A731A1 /* CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
 		BDF5DC5716477F2E00A731A1 /* CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtils.m; sourceTree = "<group>"; };
+		BDF9B50F1AA15A9D00CEA7F5 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
+		BDF9B5111AA15AAF00CEA7F5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +246,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF9B5121AA15AAF00CEA7F5 /* GoogleMobileAds.framework in Frameworks */,
 				BD6BF59D1A0337CA0009BC33 /* libGoogleAnalyticsServices.a in Frameworks */,
 				BD6BF5981A0330C00009BC33 /* libz.dylib in Frameworks */,
 				BD6BF5961A0330B60009BC33 /* SystemConfiguration.framework in Frameworks */,
@@ -337,8 +341,8 @@
 		BD2D7C3C18A6A457007B627A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				BDF5DC1C16477AAF00A731A1 /* HafezSecondViewController.xib */,
-				BDF5DC1916477AAE00A731A1 /* HafezFirstViewController.xib */,
+				BDF5DC1C16477AAF00A731A1 /* FaalPhoneViewController.xib */,
+				BDF5DC1916477AAE00A731A1 /* GhazalsViewController.xib */,
 				BDF5DC5316477D2700A731A1 /* SearchViewController.xib */,
 			);
 			name = UI;
@@ -416,6 +420,8 @@
 		BDF5DBF816477AAE00A731A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDF9B5111AA15AAF00CEA7F5 /* GoogleMobileAds.framework */,
+				BDF9B50F1AA15A9D00CEA7F5 /* Pods */,
 				BD6BF59C1A0337CA0009BC33 /* libGoogleAnalyticsServices.a */,
 				BD6BF5971A0330C00009BC33 /* libz.dylib */,
 				BD6BF5951A0330B60009BC33 /* SystemConfiguration.framework */,
@@ -444,10 +450,10 @@
 				BD2D7C4B18A7160F007B627A /* GhazalViewController.m */,
 				BDF5DC5116477D2700A731A1 /* SearchViewController.h */,
 				BDF5DC5216477D2700A731A1 /* SearchViewController.m */,
-				BDF5DC0B16477AAE00A731A1 /* HafezFirstViewController.h */,
-				BDF5DC0C16477AAE00A731A1 /* HafezFirstViewController.m */,
-				BDF5DC1216477AAE00A731A1 /* HafezSecondViewController.h */,
-				BDF5DC1316477AAE00A731A1 /* HafezSecondViewController.m */,
+				BDF5DC0B16477AAE00A731A1 /* GhazalsViewController.h */,
+				BDF5DC0C16477AAE00A731A1 /* GhazalsViewController.m */,
+				BDF5DC1216477AAE00A731A1 /* FaalPhoneViewController.h */,
+				BDF5DC1316477AAE00A731A1 /* FaalPhoneViewController.m */,
 				BDF5DC0016477AAE00A731A1 /* Supporting Files */,
 				BD2D7C3818A6A1DC007B627A /* iPhoneMainStoryboard.storyboard */,
 				BDD3EDDB18A9D08600BABAE7 /* GhazalCell.h */,
@@ -670,9 +676,9 @@
 				BDF5DC1616477AAE00A731A1 /* second.png in Resources */,
 				BDF5DC1816477AAE00A731A1 /* second@2x.png in Resources */,
 				BD2D7C4018A6ACF5007B627A /* mainPageBg.png in Resources */,
-				BDF5DC1B16477AAE00A731A1 /* HafezFirstViewController.xib in Resources */,
+				BDF5DC1B16477AAE00A731A1 /* GhazalsViewController.xib in Resources */,
 				BDD3EDDF18A9E6AA00BABAE7 /* fbshare.jpg in Resources */,
-				BDF5DC1E16477AAF00A731A1 /* HafezSecondViewController.xib in Resources */,
+				BDF5DC1E16477AAF00A731A1 /* FaalPhoneViewController.xib in Resources */,
 				BDF5DC4416477BE800A731A1 /* button.png in Resources */,
 				BD2D7C4718A6F983007B627A /* backBtn.png in Resources */,
 				BDF5DC4516477BE800A731A1 /* Default.png in Resources */,
@@ -789,8 +795,8 @@
 				BDD3EDDD18A9D08600BABAE7 /* GhazalCell.m in Sources */,
 				BDD3EDDA18A9CD7300BABAE7 /* iRate.m in Sources */,
 				BDF5DC0A16477AAE00A731A1 /* HafezAppDelegate.m in Sources */,
-				BDF5DC0D16477AAE00A731A1 /* HafezFirstViewController.m in Sources */,
-				BDF5DC1416477AAE00A731A1 /* HafezSecondViewController.m in Sources */,
+				BDF5DC0D16477AAE00A731A1 /* GhazalsViewController.m in Sources */,
+				BDF5DC1416477AAE00A731A1 /* FaalPhoneViewController.m in Sources */,
 				BDF5DC5416477D2700A731A1 /* SearchViewController.m in Sources */,
 				BD2D7C4318A6ADE1007B627A /* iCarousel.m in Sources */,
 				BDF5DC5816477F2E00A731A1 /* CommonUtils.m in Sources */,
@@ -854,20 +860,20 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		BDF5DC1916477AAE00A731A1 /* HafezFirstViewController.xib */ = {
+		BDF5DC1916477AAE00A731A1 /* GhazalsViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BDF5DC1A16477AAE00A731A1 /* en */,
 			);
-			name = HafezFirstViewController.xib;
+			name = GhazalsViewController.xib;
 			sourceTree = "<group>";
 		};
-		BDF5DC1C16477AAF00A731A1 /* HafezSecondViewController.xib */ = {
+		BDF5DC1C16477AAF00A731A1 /* FaalPhoneViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BDF5DC1D16477AAF00A731A1 /* en */,
 			);
-			name = HafezSecondViewController.xib;
+			name = FaalPhoneViewController.xib;
 			sourceTree = "<group>";
 		};
 		BDF5DC2E16477AB000A731A1 /* InfoPlist.strings */ = {
@@ -1026,7 +1032,13 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Roozbeh Zabihollahi (4JE8Q22V45)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AskHafezNative4/AskHafezNative4-Prefix.pch";
 				INFOPLIST_FILE = "AskHafezNative4/AskHafezNative4-Info.plist";
@@ -1042,7 +1054,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "AAE66D0A-1E82-4314-B0CD-20237644576B";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1054,7 +1066,13 @@
 				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Roozbeh Zabihollahi (4JE8Q22V45)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AskHafezNative4/AskHafezNative4-Prefix.pch";
 				INFOPLIST_FILE = "AskHafezNative4/AskHafezNative4-Info.plist";
@@ -1069,7 +1087,7 @@
 					"$(PROJECT_DIR)/GoogleAnalyticsServicesiOS_3.09",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "AAE66D0A-1E82-4314-B0CD-20237644576B";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
