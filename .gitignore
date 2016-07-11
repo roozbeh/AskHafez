@@ -1,0 +1,11 @@
+xcuserdata
+*.xcscmblueprint
+.gradle
+.classpath
+bin
+build
+.idea
+.project
+*.apk
+*.iml
+.settings
