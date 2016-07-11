@@ -8,23 +8,27 @@
 
 #import "FaalViewController.h"
 #import "HafezDataViewController.h"
-#import "GANTracker.h"
+#import "GAITracker.h"
+#import "GAIDictionaryBuilder.h"
 
 @implementation FaalViewController
 @synthesize delegate;
 
-- (void)viewDidLoad {
-    [[GANTracker sharedTracker] trackPageview:@"/ipad/faal" withError:nil];
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.screenName = @"/ipad/faal";
 }
 
 - (IBAction)faalButton:(id)sender {
     [self.delegate faalDismissPopover];
     
-    [[GANTracker sharedTracker] trackEvent:@"Faal"
-                                    action:@"Click"
-                                     label:@"Faal"
-                                     value:-1
-                                 withError:nil];
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Faal"
+                                                          action:@"Click"
+                                                           label:@"Faal"
+                                                           value:nil] build]];
+
 }
 
 @end

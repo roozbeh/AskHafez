@@ -10,10 +10,11 @@
 #import <sqlite3.h>
 #import "iCarousel.h"
 #import "GAI.h"
+#import <iAd/iAd.h>
 
 @class GADBannerView;
 
-@interface GhazalsViewController : GAITrackedViewController<UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate>
+@interface GhazalsViewController : GAITrackedViewController<UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate, ADBannerViewDelegate>
 {
     sqlite3 *m_database;
     int m_ghzalCnt;
@@ -23,6 +24,8 @@
     //43,46 - 233, 317
     
     UIInterfaceOrientation currOrtientation;
+    BOOL _bannerIsVisible;
+    ADBannerView *_adBanner;
 }
 
 //@property (strong, nonatomic) IBOutlet UIScrollView *srcMainBrowser;
@@ -32,4 +35,7 @@
 - (void) navigateToView:(int) ghazal_number;
 @property (weak, nonatomic) IBOutlet iCarousel *carousel;
 @property (weak, nonatomic) IBOutlet GADBannerView *bannerView;
+@property (weak, nonatomic) IBOutlet UIImageView *imgBG;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *bgDownConstraint;
+@property (strong, nonatomic) IBOutlet UIView *viewMaster;
 @end

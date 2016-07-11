@@ -8,7 +8,8 @@
 
 #import "HafezSearchViewController.h"
 #import <sqlite3.h>
-#import "GANTracker.h"
+#import "GAITracker.h"
+#import "GAIDictionaryBuilder.h"
 
 @implementation HafezSearchViewController
 @synthesize tableView;
@@ -20,11 +21,13 @@
     [searchBar setDelegate:self];
     [tableView setDelegate:self];
     [tableView setDataSource:self];
-
-
-    [[GANTracker sharedTracker] trackPageview:@"/ipad/search" withError:nil];
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    self.screenName = @"/ipad/search";
+}
 
 - (void)viewDidUnload {
     [self setSearchBar:nil];
@@ -124,11 +127,12 @@
     [srchBar resignFirstResponder];
     [self closeDB:database];
     
-    [[GANTracker sharedTracker] trackEvent:@"Search"
-                                    action:@"Click"
-                                     label:[searchBar text]
-                                     value:-1
-                                 withError:nil];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Ghazals"
+                                                          action:@"Click"
+                                                           label:[searchBar text]
+                                                           value:nil] build]];
     
 }
 

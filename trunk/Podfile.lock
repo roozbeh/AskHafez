@@ -1,13 +1,10 @@
 PODS:
-  - Google-Mobile-Ads-SDK (7.0.0)
   - GoogleAnalytics-iOS-SDK (3.0.3c)
 
 DEPENDENCIES:
-  - Google-Mobile-Ads-SDK (~> 7.0)
   - GoogleAnalytics-iOS-SDK (= 3.0.3c)
 
 SPEC CHECKSUMS:
-  Google-Mobile-Ads-SDK: 55632bafa382a0987a4cbdefdfea362e24cbe814
-  GoogleAnalytics-iOS-SDK: 4377a29aa3e039030df30fd5c6075baeed3c916c
+  GoogleAnalytics-iOS-SDK: 44a1874cccd8294a0376fd8ee136f7c898c151a5
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.39.0

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j4I-ZR-Xp9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="j4I-ZR-Xp9">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--Ghazal غزل-->
         <scene sceneID="Wfg-6f-PLF">
             <objects>
                 <navigationController definesPresentationContext="YES" id="75l-kx-FbY" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Ghazal غزل" image="ghazal.png" id="p9X-Dz-i9F"/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="e0W-Cp-zyx">
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,7 +22,7 @@
             </objects>
             <point key="canvasLocation" x="1181" y="767"/>
         </scene>
-        <!--Ghazal غزل-->
+        <!--Data Source-->
         <scene sceneID="7X2-bn-Xmk">
             <objects>
                 <viewController id="Fwd-Ea-Ccy" customClass="GhazalsViewController" sceneMemberID="viewController">
@@ -34,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="mainPageBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="vuX-G6-lgQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgU-Bj-htP" userLabel="iCarousel" customClass="iCarousel">
                                 <rect key="frame" x="0.0" y="65" width="320" height="388"/>
@@ -44,13 +45,20 @@
                                     <outlet property="delegate" destination="Fwd-Ea-Ccy" id="gW2-my-HOh"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wPn-Rf-idT" userLabel="BannerView" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="469" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="fdU-hm-xSC"/>
-                                    <constraint firstAttribute="height" constant="50" id="zfO-6c-GuY"/>
-                                </constraints>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Upy-2t-1B4">
+                                <rect key="frame" x="0.0" y="15" width="320" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUA-n7-Mwy" userLabel="FacebookBtn">
+                                        <rect key="frame" x="219" y="12" width="93" height="30"/>
+                                        <state key="normal" backgroundImage="fbshare.jpg">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onFacebookShare:" destination="Fwd-Ea-Ccy" eventType="touchUpInside" id="sOX-du-Fed"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -58,22 +66,23 @@
                             <constraint firstItem="vuX-G6-lgQ" firstAttribute="top" secondItem="cwK-kx-8qm" secondAttribute="top" id="4Wh-kf-Ite"/>
                             <constraint firstItem="xgU-Bj-htP" firstAttribute="top" secondItem="cwK-kx-8qm" secondAttribute="top" constant="65" id="AKm-3y-ynn"/>
                             <constraint firstAttribute="trailing" secondItem="xgU-Bj-htP" secondAttribute="trailing" id="BCS-YC-Pig"/>
-                            <constraint firstItem="OMO-Oa-wID" firstAttribute="top" secondItem="vuX-G6-lgQ" secondAttribute="bottom" constant="-49" id="E0v-o9-A8E"/>
                             <constraint firstAttribute="trailing" secondItem="vuX-G6-lgQ" secondAttribute="trailing" id="KGB-BA-CXk"/>
-                            <constraint firstItem="OMO-Oa-wID" firstAttribute="top" secondItem="wPn-Rf-idT" secondAttribute="bottom" id="OV1-k8-jev"/>
-                            <constraint firstAttribute="centerX" secondItem="wPn-Rf-idT" secondAttribute="centerX" id="UTG-TD-Bfa"/>
                             <constraint firstItem="vuX-G6-lgQ" firstAttribute="leading" secondItem="cwK-kx-8qm" secondAttribute="leading" id="fkG-MP-1ls"/>
                             <constraint firstItem="OMO-Oa-wID" firstAttribute="top" secondItem="xgU-Bj-htP" secondAttribute="bottom" constant="66" id="ma4-UX-8Jw"/>
+                            <constraint firstItem="OMO-Oa-wID" firstAttribute="top" secondItem="vuX-G6-lgQ" secondAttribute="bottom" id="oUF-8U-qzC"/>
                             <constraint firstItem="xgU-Bj-htP" firstAttribute="leading" secondItem="cwK-kx-8qm" secondAttribute="leading" id="vNw-ys-8N7"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Ghazal غزل" image="ghazal.png" id="spo-C9-HwA"/>
                     <navigationItem key="navigationItem" id="Myy-Gc-s6k"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black" translucent="NO"/>
                     <connections>
-                        <outlet property="bannerView" destination="wPn-Rf-idT" id="jRB-LC-e4W"/>
+                        <outlet property="bgDownConstraint" destination="oUF-8U-qzC" id="xsW-w0-gl6"/>
                         <outlet property="carousel" destination="xgU-Bj-htP" id="xgF-Hu-m7g"/>
+                        <outlet property="imgBG" destination="vuX-G6-lgQ" id="xV4-H4-fgl"/>
+                        <outlet property="viewMaster" destination="cwK-kx-8qm" id="ICv-qt-qvq"/>
                         <segue destination="366-qW-DQp" kind="push" identifier="showGhazal" id="iNh-2V-p5J"/>
                     </connections>
                 </viewController>
@@ -157,7 +166,7 @@
                             <constraint firstItem="cXv-Mx-IZR" firstAttribute="top" secondItem="7Zs-a3-tEF" secondAttribute="top" id="vJv-Ul-bUT"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="XvM-Jg-tSH"/>
                     <connections>
                         <outlet property="lblGhazamNumber" destination="U6k-6E-ZXE" id="6Cd-XV-RVZ"/>
@@ -172,6 +181,7 @@
         <scene sceneID="vyT-fK-lwq">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="j4I-ZR-Xp9" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Vna-wp-CrV">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -226,29 +236,39 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LSg-nv-znc" userLabel="BannerView" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="469" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aGx-SM-2gk" secondAttribute="trailing" id="6bE-a8-1o7"/>
                             <constraint firstItem="aGx-SM-2gk" firstAttribute="top" secondItem="smA-9E-oWZ" secondAttribute="top" id="8HS-Xw-idY"/>
-                            <constraint firstItem="GmZ-Ih-iO4" firstAttribute="top" secondItem="LSg-nv-znc" secondAttribute="bottom" id="dWG-MH-REd"/>
                             <constraint firstItem="GmZ-Ih-iO4" firstAttribute="top" secondItem="aGx-SM-2gk" secondAttribute="bottom" id="dld-VL-jIu"/>
                             <constraint firstItem="aGx-SM-2gk" firstAttribute="leading" secondItem="smA-9E-oWZ" secondAttribute="leading" id="tCK-dY-O0V"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="Faal فال" image="dice.png" id="Zo0-pO-nR7"/>
-                    <connections>
-                        <outlet property="bannerView" destination="LSg-nv-znc" id="9Nn-CB-foZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bpM-Fj-cmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1181" y="1554"/>
+        </scene>
+        <!--SettingsViewController-->
+        <scene sceneID="LPd-Xr-nqQ">
+            <objects>
+                <viewController id="kSe-CY-R3u" userLabel="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yiy-m7-HjU"/>
+                        <viewControllerLayoutGuide type="bottom" id="UCh-zP-M3V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UuD-Yn-iDn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q2M-9X-DHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="2465"/>
         </scene>
         <!--Search جستجو-->
         <scene sceneID="Qms-Oj-8el">
@@ -347,9 +367,4 @@
         <image name="mainPageBg.png" width="640" height="1186"/>
         <image name="search.png" width="46" height="43"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
 </document>

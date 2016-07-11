@@ -8,6 +8,7 @@
 
 #import "HafezDataViewController.h"
 #import "FaalViewController.h"
+#import "HafezRootViewController.h"
 
 @implementation HafezDataViewController
 
@@ -132,7 +133,6 @@
     }
 }
 
-#import "HafezRootViewController.h"
 
 -(void)faalDismissPopover
 {

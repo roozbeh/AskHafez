@@ -17,7 +17,6 @@
 		BD0E8ADC1657526900E3344E /* HafezRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E8ADB1657526900E3344E /* HafezRootViewController.m */; };
 		BD0E8ADF1657526900E3344E /* HafezDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E8ADE1657526900E3344E /* HafezDataViewController.m */; };
 		BD0E8AE21657526900E3344E /* HafezModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E8AE11657526900E3344E /* HafezModelController.m */; };
-		BD0E8AEC1657526A00E3344E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DC2516477AAF00A731A1 /* SenTestingKit.framework */; };
 		BD0E8AED1657526A00E3344E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBF916477AAE00A731A1 /* UIKit.framework */; };
 		BD0E8AEE1657526A00E3344E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBFB16477AAE00A731A1 /* Foundation.framework */; };
 		BD0E8AF61657526A00E3344E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD0E8AF41657526A00E3344E /* InfoPlist.strings */; };
@@ -31,7 +30,6 @@
 		BD14626F16589434005BD350 /* FaalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD14626D16589434005BD350 /* FaalViewController.m */; };
 		BD2D7C3718A6A1BA007B627A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3518A6A1BA007B627A /* MainStoryboard.storyboard */; };
 		BD2D7C3918A6A1DC007B627A /* iPhoneMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3818A6A1DC007B627A /* iPhoneMainStoryboard.storyboard */; };
-		BD2D7C3B18A6A2BA007B627A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3A18A6A2BA007B627A /* Images.xcassets */; };
 		BD2D7C4018A6ACF5007B627A /* mainPageBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3F18A6ACF5007B627A /* mainPageBg.png */; };
 		BD2D7C4318A6ADE1007B627A /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7C4218A6ADE1007B627A /* iCarousel.m */; };
 		BD2D7C4518A6B2F0007B627A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2D7C4418A6B2F0007B627A /* QuartzCore.framework */; };
@@ -39,23 +37,33 @@
 		BD2D7C4918A6FAAD007B627A /* facebookBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C4818A6FAAD007B627A /* facebookBtn.png */; };
 		BD2D7C4C18A7160F007B627A /* GhazalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7C4B18A7160F007B627A /* GhazalViewController.m */; };
 		BD2D7C4E18A73D76007B627A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2D7C4D18A73D76007B627A /* Social.framework */; };
+		BD3D0BD81B61D73C00540632 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3D0BD71B61D73C00540632 /* iAd.framework */; };
 		BD54AAF716487CA000E55C9C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD54AAF616487CA000E55C9C /* CFNetwork.framework */; };
 		BD56BDD31656038A006D31D7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD56BDD21656038A006D31D7 /* libsqlite3.0.dylib */; };
-		BD6BF5851A032B0A0009BC33 /* libPods-Google-Mobile-Ads-SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5841A032B0A0009BC33 /* libPods-Google-Mobile-Ads-SDK.a */; };
 		BD6BF5941A0330AC0009BC33 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5931A0330AC0009BC33 /* CoreData.framework */; };
 		BD6BF5961A0330B60009BC33 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5951A0330B60009BC33 /* SystemConfiguration.framework */; };
 		BD6BF5981A0330C00009BC33 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5971A0330C00009BC33 /* libz.dylib */; };
 		BD6BF59D1A0337CA0009BC33 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF59C1A0337CA0009BC33 /* libGoogleAnalyticsServices.a */; };
+		BD8050981D32ECB4006C7730 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3A18A6A2BA007B627A /* Images.xcassets */; };
 		BD914232164789B200F5F106 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BD914231164789B200F5F106 /* Icon.png */; };
-		BDC67AE916938D6F00DDF402 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDC67AE816938D6F00DDF402 /* Default-568h@2x.png */; };
+		BD96EFC31BE2F93A00BE13DE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3518A6A1BA007B627A /* MainStoryboard.storyboard */; };
+		BD96EFC41BE2FA6B00BE13DE /* HafezSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD91931C166281F3009E472D /* HafezSearchViewController.m */; };
+		BD96EFC51BE2FA6B00BE13DE /* FaalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD14626D16589434005BD350 /* FaalViewController.m */; };
+		BD96EFC71BE2FA6B00BE13DE /* HafezRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E8ADB1657526900E3344E /* HafezRootViewController.m */; };
+		BD96EFC81BE2FA6B00BE13DE /* HafezDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E8ADE1657526900E3344E /* HafezDataViewController.m */; };
+		BD96EFC91BE2FA6B00BE13DE /* HafezModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0E8AE11657526900E3344E /* HafezModelController.m */; };
+		BD9CD4701B61EB98004B2B30 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF59C1A0337CA0009BC33 /* libGoogleAnalyticsServices.a */; };
+		BD9CD4711B61EBBE004B2B30 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5971A0330C00009BC33 /* libz.dylib */; };
+		BD9CD4721B61EBE1004B2B30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5951A0330B60009BC33 /* SystemConfiguration.framework */; };
+		BD9CD4731B61EBEF004B2B30 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5931A0330AC0009BC33 /* CoreData.framework */; };
+		BD9CD4741B61EC1C004B2B30 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3D0BD71B61D73C00540632 /* iAd.framework */; };
+		BD9CD48D1B61F9E7004B2B30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3A18A6A2BA007B627A /* Images.xcassets */; };
 		BDD3EDD918A9CD7300BABAE7 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BDD3EDD618A9CD7300BABAE7 /* iRate.bundle */; };
 		BDD3EDDA18A9CD7300BABAE7 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD3EDD818A9CD7300BABAE7 /* iRate.m */; };
 		BDD3EDDD18A9D08600BABAE7 /* GhazalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD3EDDC18A9D08600BABAE7 /* GhazalCell.m */; };
 		BDD3EDDF18A9E6AA00BABAE7 /* fbshare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDD3EDDE18A9E6AA00BABAE7 /* fbshare.jpg */; };
 		BDE608051662B36700E082A3 /* HafezSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD91931C166281F3009E472D /* HafezSearchViewController.m */; };
 		BDE608071662BD9A00E082A3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD54AAF616487CA000E55C9C /* CFNetwork.framework */; };
-		BDE6080B1662BECD00E082A3 /* ipad_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE6080A1662BECD00E082A3 /* ipad_icon.png */; };
-		BDE6080D1662BF4500E082A3 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = BDE6080C1662BF4500E082A3 /* Default-Portrait~ipad.png */; };
 		BDF5DBFA16477AAE00A731A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBF916477AAE00A731A1 /* UIKit.framework */; };
 		BDF5DBFC16477AAE00A731A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBFB16477AAE00A731A1 /* Foundation.framework */; };
 		BDF5DBFE16477AAE00A731A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBFD16477AAE00A731A1 /* CoreGraphics.framework */; };
@@ -70,14 +78,7 @@
 		BDF5DC1816477AAE00A731A1 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1716477AAE00A731A1 /* second@2x.png */; };
 		BDF5DC1B16477AAE00A731A1 /* GhazalsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1916477AAE00A731A1 /* GhazalsViewController.xib */; };
 		BDF5DC1E16477AAF00A731A1 /* FaalPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC1C16477AAF00A731A1 /* FaalPhoneViewController.xib */; };
-		BDF5DC2616477AAF00A731A1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DC2516477AAF00A731A1 /* SenTestingKit.framework */; };
-		BDF5DC2716477AAF00A731A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBF916477AAE00A731A1 /* UIKit.framework */; };
-		BDF5DC2816477AAF00A731A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBFB16477AAE00A731A1 /* Foundation.framework */; };
-		BDF5DC3016477AB000A731A1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC2E16477AB000A731A1 /* InfoPlist.strings */; };
-		BDF5DC3316477AB100A731A1 /* AskHafezNative4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC3216477AB100A731A1 /* AskHafezNative4Tests.m */; };
 		BDF5DC4416477BE800A731A1 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC3D16477BE800A731A1 /* button.png */; };
-		BDF5DC4516477BE800A731A1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC3E16477BE800A731A1 /* Default.png */; };
-		BDF5DC4616477BE800A731A1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC3F16477BE800A731A1 /* Default@2x.png */; };
 		BDF5DC4716477BE800A731A1 /* dice.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC4016477BE800A731A1 /* dice.png */; };
 		BDF5DC4816477BE800A731A1 /* ghazal_pic_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC4116477BE800A731A1 /* ghazal_pic_portrait.png */; };
 		BDF5DC4916477BE800A731A1 /* ghazal.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC4216477BE800A731A1 /* ghazal.png */; };
@@ -86,7 +87,6 @@
 		BDF5DC5416477D2700A731A1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC5216477D2700A731A1 /* SearchViewController.m */; };
 		BDF5DC5516477D2700A731A1 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC5316477D2700A731A1 /* SearchViewController.xib */; };
 		BDF5DC5816477F2E00A731A1 /* CommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF5DC5716477F2E00A731A1 /* CommonUtils.m */; };
-		BDF9B5121AA15AAF00CEA7F5 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9B5111AA15AAF00CEA7F5 /* GoogleMobileAds.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,13 +96,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = BD0E8AC81657526900E3344E;
 			remoteInfo = "Ask Hafez iPad";
-		};
-		BDF5DC2916477AAF00A731A1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BDF5DBEC16477AAE00A731A1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BDF5DBF416477AAE00A731A1;
-			remoteInfo = AskHafezNative4;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -123,7 +116,7 @@
 		BD0E8ADE1657526900E3344E /* HafezDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HafezDataViewController.m; sourceTree = "<group>"; };
 		BD0E8AE01657526900E3344E /* HafezModelController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HafezModelController.h; sourceTree = "<group>"; };
 		BD0E8AE11657526900E3344E /* HafezModelController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HafezModelController.m; sourceTree = "<group>"; };
-		BD0E8AEB1657526A00E3344E /* Ask Hafez iPadTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ask Hafez iPadTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0E8AEB1657526A00E3344E /* Ask Hafez iPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ask Hafez iPadTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0E8AF31657526A00E3344E /* Ask Hafez iPadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ask Hafez iPadTests-Info.plist"; sourceTree = "<group>"; };
 		BD0E8AF51657526A00E3344E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BD0E8AF71657526A00E3344E /* Ask_Hafez_iPadTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ask_Hafez_iPadTests.h; sourceTree = "<group>"; };
@@ -146,18 +139,10 @@
 		BD2D7C4A18A7160F007B627A /* GhazalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GhazalViewController.h; sourceTree = "<group>"; };
 		BD2D7C4B18A7160F007B627A /* GhazalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GhazalViewController.m; sourceTree = "<group>"; };
 		BD2D7C4D18A73D76007B627A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		BD3D0BD71B61D73C00540632 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		BD54AAF616487CA000E55C9C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BD56BDD21656038A006D31D7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		BD6BF5841A032B0A0009BC33 /* libPods-Google-Mobile-Ads-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Google-Mobile-Ads-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Google-Mobile-Ads-SDK.a"; sourceTree = "<group>"; };
-		BD6BF5891A0330780009BC33 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = GoogleAnalyticsServicesiOS_3.09/GoogleAnalytics/Library/GAI.h; sourceTree = "<group>"; };
-		BD6BF58A1A0330780009BC33 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = GoogleAnalyticsServicesiOS_3.09/GoogleAnalytics/Library/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		BD6BF58C1A0330780009BC33 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProduct.h; path = GoogleAnalyticsServicesiOS_3.09/GoogleAnalytics/Library/GAIEcommerceProduct.h; sourceTree = "<group>"; };
-		BD6BF58D1A0330780009BC33 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProductAction.h; path = GoogleAnalyticsServicesiOS_3.09/GoogleAnalytics/Library/GAIEcommerceProductAction.h; sourceTree = "<group>"; };
-		BD6BF58E1A0330780009BC33 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIEcommercePromotion.h; path = GoogleAnalyticsServicesiOS_3.09/GoogleAnalytics/Library/GAIEcommercePromotion.h; sourceTree = "<group>"; };
-		BD6BF58F1A0330780009BC33 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = GoogleAnalyticsServicesiOS_3.09/GoogleAnalytics/Library/GAIFields.h; sourceTree = "<group>"; };
-		BD6BF5901A0330780009BC33 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = GoogleAnalyticsServicesiOS_3.09/GoogleAnalytics/Library/GAILogger.h; sourceTree = "<group>"; };
-		BD6BF5911A0330780009BC33 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = GoogleAnalyticsServicesiOS_3.09/GoogleAnalytics/Library/GAITrackedViewController.h; sourceTree = "<group>"; };
-		BD6BF5921A0330780009BC33 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = GoogleAnalyticsServicesiOS_3.09/GoogleAnalytics/Library/GAITracker.h; sourceTree = "<group>"; };
 		BD6BF5931A0330AC0009BC33 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BD6BF5951A0330B60009BC33 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BD6BF5971A0330C00009BC33 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -167,15 +152,12 @@
 		BD914231164789B200F5F106 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = AskHafezNative4/Icon.png; sourceTree = "<group>"; };
 		BD91931B166281F3009E472D /* HafezSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HafezSearchViewController.h; sourceTree = "<group>"; };
 		BD91931C166281F3009E472D /* HafezSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HafezSearchViewController.m; sourceTree = "<group>"; };
-		BDC67AE816938D6F00DDF402 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		BDD3EDD618A9CD7300BABAE7 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = iRate.bundle; path = Library/iRate.bundle; sourceTree = "<group>"; };
 		BDD3EDD718A9CD7300BABAE7 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = Library/iRate.h; sourceTree = "<group>"; };
 		BDD3EDD818A9CD7300BABAE7 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = Library/iRate.m; sourceTree = "<group>"; };
 		BDD3EDDB18A9D08600BABAE7 /* GhazalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GhazalCell.h; sourceTree = "<group>"; };
 		BDD3EDDC18A9D08600BABAE7 /* GhazalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GhazalCell.m; sourceTree = "<group>"; };
 		BDD3EDDE18A9E6AA00BABAE7 /* fbshare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fbshare.jpg; path = AskHafezNative4/images/fbshare.jpg; sourceTree = "<group>"; };
-		BDE6080A1662BECD00E082A3 /* ipad_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ipad_icon.png; sourceTree = "<group>"; };
-		BDE6080C1662BF4500E082A3 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		BDF5DBF516477AAE00A731A1 /* AskHafezNative4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskHafezNative4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF5DBF916477AAE00A731A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BDF5DBFB16477AAE00A731A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -196,15 +178,11 @@
 		BDF5DC1716477AAE00A731A1 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "second@2x.png"; path = "AskHafezNative4/second@2x.png"; sourceTree = "<group>"; };
 		BDF5DC1A16477AAE00A731A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GhazalsViewController.xib; sourceTree = "<group>"; };
 		BDF5DC1D16477AAF00A731A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FaalPhoneViewController.xib; sourceTree = "<group>"; };
-		BDF5DC2416477AAF00A731A1 /* AskHafezNative4Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AskHafezNative4Tests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDF5DC2516477AAF00A731A1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		BDF5DC2D16477AB000A731A1 /* AskHafezNative4Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AskHafezNative4Tests-Info.plist"; sourceTree = "<group>"; };
 		BDF5DC2F16477AB000A731A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BDF5DC3116477AB000A731A1 /* AskHafezNative4Tests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AskHafezNative4Tests.h; sourceTree = "<group>"; };
 		BDF5DC3216477AB100A731A1 /* AskHafezNative4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AskHafezNative4Tests.m; sourceTree = "<group>"; };
 		BDF5DC3D16477BE800A731A1 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = AskHafezNative4/images/button.png; sourceTree = "<group>"; };
-		BDF5DC3E16477BE800A731A1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = AskHafezNative4/images/Default.png; sourceTree = "<group>"; };
-		BDF5DC3F16477BE800A731A1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "AskHafezNative4/images/Default@2x.png"; sourceTree = "<group>"; };
 		BDF5DC4016477BE800A731A1 /* dice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dice.png; path = AskHafezNative4/images/dice.png; sourceTree = "<group>"; };
 		BDF5DC4116477BE800A731A1 /* ghazal_pic_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ghazal_pic_portrait.png; path = AskHafezNative4/images/ghazal_pic_portrait.png; sourceTree = "<group>"; };
 		BDF5DC4216477BE800A731A1 /* ghazal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ghazal.png; path = AskHafezNative4/images/ghazal.png; sourceTree = "<group>"; };
@@ -224,11 +202,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9CD4741B61EC1C004B2B30 /* iAd.framework in Frameworks */,
+				BD9CD4731B61EBEF004B2B30 /* CoreData.framework in Frameworks */,
+				BD9CD4721B61EBE1004B2B30 /* SystemConfiguration.framework in Frameworks */,
+				BDE608071662BD9A00E082A3 /* CFNetwork.framework in Frameworks */,
+				BD9CD4711B61EBBE004B2B30 /* libz.dylib in Frameworks */,
 				BD0E8B0016575A8D00E3344E /* libsqlite3.0.dylib in Frameworks */,
 				BD0E8ACB1657526900E3344E /* UIKit.framework in Frameworks */,
 				BD0E8ACC1657526900E3344E /* Foundation.framework in Frameworks */,
 				BD0E8ACD1657526900E3344E /* CoreGraphics.framework in Frameworks */,
-				BDE608071662BD9A00E082A3 /* CFNetwork.framework in Frameworks */,
+				BD9CD4701B61EB98004B2B30 /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,7 +219,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD0E8AEC1657526A00E3344E /* SenTestingKit.framework in Frameworks */,
 				BD0E8AED1657526A00E3344E /* UIKit.framework in Frameworks */,
 				BD0E8AEE1657526A00E3344E /* Foundation.framework in Frameworks */,
 			);
@@ -246,12 +228,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDF9B5121AA15AAF00CEA7F5 /* GoogleMobileAds.framework in Frameworks */,
+				BD3D0BD81B61D73C00540632 /* iAd.framework in Frameworks */,
 				BD6BF59D1A0337CA0009BC33 /* libGoogleAnalyticsServices.a in Frameworks */,
 				BD6BF5981A0330C00009BC33 /* libz.dylib in Frameworks */,
 				BD6BF5961A0330B60009BC33 /* SystemConfiguration.framework in Frameworks */,
 				BD6BF5941A0330AC0009BC33 /* CoreData.framework in Frameworks */,
-				BD6BF5851A032B0A0009BC33 /* libPods-Google-Mobile-Ads-SDK.a in Frameworks */,
 				BD2D7C4E18A73D76007B627A /* Social.framework in Frameworks */,
 				BD2D7C4518A6B2F0007B627A /* QuartzCore.framework in Frameworks */,
 				BD56BDD31656038A006D31D7 /* libsqlite3.0.dylib in Frameworks */,
@@ -260,16 +241,6 @@
 				BDF5DBFC16477AAE00A731A1 /* Foundation.framework in Frameworks */,
 				BDF5DBFE16477AAE00A731A1 /* CoreGraphics.framework in Frameworks */,
 				9D1F69004C5304C64CF6A7BD /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDF5DC2016477AAF00A731A1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDF5DC2616477AAF00A731A1 /* SenTestingKit.framework in Frameworks */,
-				BDF5DC2716477AAF00A731A1 /* UIKit.framework in Frameworks */,
-				BDF5DC2816477AAF00A731A1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,22 +330,6 @@
 			name = Common;
 			sourceTree = "<group>";
 		};
-		BD6BF5881A0330620009BC33 /* GoogleAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				BD6BF5891A0330780009BC33 /* GAI.h */,
-				BD6BF58A1A0330780009BC33 /* GAIDictionaryBuilder.h */,
-				BD6BF58C1A0330780009BC33 /* GAIEcommerceProduct.h */,
-				BD6BF58D1A0330780009BC33 /* GAIEcommerceProductAction.h */,
-				BD6BF58E1A0330780009BC33 /* GAIEcommercePromotion.h */,
-				BD6BF58F1A0330780009BC33 /* GAIFields.h */,
-				BD6BF5901A0330780009BC33 /* GAILogger.h */,
-				BD6BF5911A0330780009BC33 /* GAITrackedViewController.h */,
-				BD6BF5921A0330780009BC33 /* GAITracker.h */,
-			);
-			name = GoogleAnalytics;
-			sourceTree = "<group>";
-		};
 		BDD3EDD518A9CD6500BABAE7 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,10 +345,6 @@
 		BDF5DBEA16477AAE00A731A1 = {
 			isa = PBXGroup;
 			children = (
-				BD6BF5881A0330620009BC33 /* GoogleAnalytics */,
-				BDC67AE816938D6F00DDF402 /* Default-568h@2x.png */,
-				BDE6080C1662BF4500E082A3 /* Default-Portrait~ipad.png */,
-				BDE6080A1662BECD00E082A3 /* ipad_icon.png */,
 				BDF5DC4B16477BED00A731A1 /* db */,
 				BDF5DC3C16477BDD00A731A1 /* images */,
 				BDF5DBFF16477AAE00A731A1 /* AskHafezNative4 */,
@@ -410,9 +361,8 @@
 			isa = PBXGroup;
 			children = (
 				BDF5DBF516477AAE00A731A1 /* AskHafezNative4.app */,
-				BDF5DC2416477AAF00A731A1 /* AskHafezNative4Tests.octest */,
 				BD0E8AC91657526900E3344E /* Ask Hafez iPad.app */,
-				BD0E8AEB1657526A00E3344E /* Ask Hafez iPadTests.octest */,
+				BD0E8AEB1657526A00E3344E /* Ask Hafez iPadTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -420,6 +370,7 @@
 		BDF5DBF816477AAE00A731A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD3D0BD71B61D73C00540632 /* iAd.framework */,
 				BDF9B5111AA15AAF00CEA7F5 /* GoogleMobileAds.framework */,
 				BDF9B50F1AA15A9D00CEA7F5 /* Pods */,
 				BD6BF59C1A0337CA0009BC33 /* libGoogleAnalyticsServices.a */,
@@ -434,7 +385,6 @@
 				BDF5DBF916477AAE00A731A1 /* UIKit.framework */,
 				BDF5DBFB16477AAE00A731A1 /* Foundation.framework */,
 				BDF5DBFD16477AAE00A731A1 /* CoreGraphics.framework */,
-				BDF5DC2516477AAF00A731A1 /* SenTestingKit.framework */,
 				3E25AEB38DE1CECD7610B13F /* libPods.a */,
 			);
 			name = Frameworks;
@@ -510,8 +460,6 @@
 				BDF5DC1516477AAE00A731A1 /* second.png */,
 				BDF5DC1716477AAE00A731A1 /* second@2x.png */,
 				BDF5DC3D16477BE800A731A1 /* button.png */,
-				BDF5DC3E16477BE800A731A1 /* Default.png */,
-				BDF5DC3F16477BE800A731A1 /* Default@2x.png */,
 				BDF5DC4016477BE800A731A1 /* dice.png */,
 				BDF5DC4116477BE800A731A1 /* ghazal_pic_portrait.png */,
 				BDF5DC4216477BE800A731A1 /* ghazal.png */,
@@ -564,8 +512,8 @@
 			);
 			name = "Ask Hafez iPadTests";
 			productName = "Ask Hafez iPadTests";
-			productReference = BD0E8AEB1657526A00E3344E /* Ask Hafez iPadTests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
+			productReference = BD0E8AEB1657526A00E3344E /* Ask Hafez iPadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		BDF5DBF416477AAE00A731A1 /* AskHafezNative4 */ = {
 			isa = PBXNativeTarget;
@@ -576,6 +524,7 @@
 				BDF5DBF216477AAE00A731A1 /* Frameworks */,
 				BDF5DBF316477AAE00A731A1 /* Resources */,
 				359281FF38B46D9E6FD05007 /* Copy Pods Resources */,
+				2BD5CD00D50EA4C73C9BA351 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -586,33 +535,18 @@
 			productReference = BDF5DBF516477AAE00A731A1 /* AskHafezNative4.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BDF5DC2316477AAF00A731A1 /* AskHafezNative4Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BDF5DC3916477AB100A731A1 /* Build configuration list for PBXNativeTarget "AskHafezNative4Tests" */;
-			buildPhases = (
-				BDF5DC1F16477AAF00A731A1 /* Sources */,
-				BDF5DC2016477AAF00A731A1 /* Frameworks */,
-				BDF5DC2116477AAF00A731A1 /* Resources */,
-				BDF5DC2216477AAF00A731A1 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BDF5DC2A16477AAF00A731A1 /* PBXTargetDependency */,
-			);
-			name = AskHafezNative4Tests;
-			productName = AskHafezNative4Tests;
-			productReference = BDF5DC2416477AAF00A731A1 /* AskHafezNative4Tests.octest */;
-			productType = "com.apple.product-type.bundle.ocunit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		BDF5DBEC16477AAE00A731A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0710;
 				LastUpgradeCheck = 0420;
 				TargetAttributes = {
+					BD0E8AC81657526900E3344E = {
+						DevelopmentTeam = 4JE8Q22V45;
+					};
 					BDF5DBF416477AAE00A731A1 = {
 						DevelopmentTeam = 4JE8Q22V45;
 					};
@@ -631,7 +565,6 @@
 			projectRoot = "";
 			targets = (
 				BDF5DBF416477AAE00A731A1 /* AskHafezNative4 */,
-				BDF5DC2316477AAF00A731A1 /* AskHafezNative4Tests */,
 				BD0E8AC81657526900E3344E /* Ask Hafez iPad */,
 				BD0E8AEA1657526A00E3344E /* Ask Hafez iPadTests */,
 			);
@@ -644,14 +577,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0E8AD31657526900E3344E /* InfoPlist.strings in Resources */,
+				BD9CD48D1B61F9E7004B2B30 /* Images.xcassets in Resources */,
 				BD0E8B0416575D5400E3344E /* ghazals.sqlite in Resources */,
 				BD146258165760DA005BD350 /* ghazal_pic_portrait.png in Resources */,
 				BD146266165853CF005BD350 /* search_b.png in Resources */,
 				BD14626A165855D9005BD350 /* sign_post2.gif in Resources */,
 				BD14626B165893DF005BD350 /* button.png in Resources */,
 				BD2D7C3718A6A1BA007B627A /* MainStoryboard.storyboard in Resources */,
-				BDE6080B1662BECD00E082A3 /* ipad_icon.png in Resources */,
-				BDE6080D1662BF4500E082A3 /* Default-Portrait~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,12 +600,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD2D7C4918A6FAAD007B627A /* facebookBtn.png in Resources */,
+				BD8050981D32ECB4006C7730 /* Images.xcassets in Resources */,
 				BDF5DC0416477AAE00A731A1 /* InfoPlist.strings in Resources */,
-				BD2D7C3B18A6A2BA007B627A /* Images.xcassets in Resources */,
 				BDF5DC0F16477AAE00A731A1 /* first.png in Resources */,
 				BDF5DC1116477AAE00A731A1 /* first@2x.png in Resources */,
 				BD2D7C3918A6A1DC007B627A /* iPhoneMainStoryboard.storyboard in Resources */,
 				BDF5DC1616477AAE00A731A1 /* second.png in Resources */,
+				BD96EFC31BE2F93A00BE13DE /* MainStoryboard.storyboard in Resources */,
 				BDF5DC1816477AAE00A731A1 /* second@2x.png in Resources */,
 				BD2D7C4018A6ACF5007B627A /* mainPageBg.png in Resources */,
 				BDF5DC1B16477AAE00A731A1 /* GhazalsViewController.xib in Resources */,
@@ -681,8 +614,6 @@
 				BDF5DC1E16477AAF00A731A1 /* FaalPhoneViewController.xib in Resources */,
 				BDF5DC4416477BE800A731A1 /* button.png in Resources */,
 				BD2D7C4718A6F983007B627A /* backBtn.png in Resources */,
-				BDF5DC4516477BE800A731A1 /* Default.png in Resources */,
-				BDF5DC4616477BE800A731A1 /* Default@2x.png in Resources */,
 				BDF5DC4716477BE800A731A1 /* dice.png in Resources */,
 				BDF5DC4816477BE800A731A1 /* ghazal_pic_portrait.png in Resources */,
 				BDD3EDD918A9CD7300BABAE7 /* iRate.bundle in Resources */,
@@ -691,21 +622,27 @@
 				BDF5DC4D16477BFB00A731A1 /* ghazals.sqlite in Resources */,
 				BDF5DC5516477D2700A731A1 /* SearchViewController.xib in Resources */,
 				BD914232164789B200F5F106 /* Icon.png in Resources */,
-				BDC67AE916938D6F00DDF402 /* Default-568h@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDF5DC2116477AAF00A731A1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDF5DC3016477AB000A731A1 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2BD5CD00D50EA4C73C9BA351 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		359281FF38B46D9E6FD05007 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -749,19 +686,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		BDF5DC2216477AAF00A731A1 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -793,22 +717,19 @@
 			files = (
 				BDF5DC0616477AAE00A731A1 /* main.m in Sources */,
 				BDD3EDDD18A9D08600BABAE7 /* GhazalCell.m in Sources */,
+				BD96EFC41BE2FA6B00BE13DE /* HafezSearchViewController.m in Sources */,
 				BDD3EDDA18A9CD7300BABAE7 /* iRate.m in Sources */,
+				BD96EFC91BE2FA6B00BE13DE /* HafezModelController.m in Sources */,
+				BD96EFC81BE2FA6B00BE13DE /* HafezDataViewController.m in Sources */,
 				BDF5DC0A16477AAE00A731A1 /* HafezAppDelegate.m in Sources */,
 				BDF5DC0D16477AAE00A731A1 /* GhazalsViewController.m in Sources */,
 				BDF5DC1416477AAE00A731A1 /* FaalPhoneViewController.m in Sources */,
+				BD96EFC71BE2FA6B00BE13DE /* HafezRootViewController.m in Sources */,
 				BDF5DC5416477D2700A731A1 /* SearchViewController.m in Sources */,
 				BD2D7C4318A6ADE1007B627A /* iCarousel.m in Sources */,
 				BDF5DC5816477F2E00A731A1 /* CommonUtils.m in Sources */,
+				BD96EFC51BE2FA6B00BE13DE /* FaalViewController.m in Sources */,
 				BD2D7C4C18A7160F007B627A /* GhazalViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDF5DC1F16477AAF00A731A1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDF5DC3316477AB100A731A1 /* AskHafezNative4Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -819,11 +740,6 @@
 			isa = PBXTargetDependency;
 			target = BD0E8AC81657526900E3344E /* Ask Hafez iPad */;
 			targetProxy = BD0E8AEF1657526A00E3344E /* PBXContainerItemProxy */;
-		};
-		BDF5DC2A16477AAF00A731A1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BDF5DBF416477AAE00A731A1 /* AskHafezNative4 */;
-			targetProxy = BDF5DC2916477AAF00A731A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -890,19 +806,23 @@
 		BD0E8AFB1657526A00E3344E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Roozbeh Zabihollahi (997C6ET7Z5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Roozbeh Zabihollahi (997C6ET7Z5)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = iPadIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Roozbeh Zabihollahi";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ask Hafez iPad/Ask Hafez iPad-Prefix.pch";
 				INFOPLIST_FILE = "Ask Hafez iPad/Ask Hafez iPad-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AskHafezNative4\"",
+					"$(PROJECT_DIR)/GoogleAnalyticsServicesiOS_3.09",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A260B2D1-3D30-43EF-8C3C-9DBAB864C59A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A260B2D1-3D30-43EF-8C3C-9DBAB864C59A";
+				PROVISIONING_PROFILE = "42f1b66a-245b-47ce-a7ee-af8669f473b8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "42f1b66a-245b-47ce-a7ee-af8669f473b8";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -911,19 +831,23 @@
 		BD0E8AFC1657526A00E3344E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Roozbeh Zabihollahi (997C6ET7Z5)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Roozbeh Zabihollahi (997C6ET7Z5)";
+				ARCHS = "$(ARCHS_STANDARD)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = iPadIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Roozbeh Zabihollahi";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ask Hafez iPad/Ask Hafez iPad-Prefix.pch";
 				INFOPLIST_FILE = "Ask Hafez iPad/Ask Hafez iPad-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/AskHafezNative4\"",
+					"$(PROJECT_DIR)/GoogleAnalyticsServicesiOS_3.09",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "A260B2D1-3D30-43EF-8C3C-9DBAB864C59A";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "A260B2D1-3D30-43EF-8C3C-9DBAB864C59A";
+				PROVISIONING_PROFILE = "42f1b66a-245b-47ce-a7ee-af8669f473b8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "42f1b66a-245b-47ce-a7ee-af8669f473b8";
 				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
@@ -935,7 +859,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ask Hafez iPad.app/Ask Hafez iPad";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ask Hafez iPad/Ask Hafez iPad-Prefix.pch";
@@ -943,7 +867,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -953,7 +876,7 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Ask Hafez iPad.app/Ask Hafez iPad";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ask Hafez iPad/Ask Hafez iPad-Prefix.pch";
@@ -961,7 +884,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1030,11 +952,12 @@
 			baseConfigurationReference = 2A0336AC34EB2812E9926167 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = iPadIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0",
@@ -1055,6 +978,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1064,11 +988,12 @@
 			baseConfigurationReference = 668EF0960EA400E49BD80DDB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD)";
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = iPadIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0",
@@ -1088,41 +1013,8 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		BDF5DC3A16477AB100A731A1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AskHafezNative4.app/AskHafezNative4";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AskHafezNative4/AskHafezNative4-Prefix.pch";
-				INFOPLIST_FILE = "AskHafezNative4Tests/AskHafezNative4Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		BDF5DC3B16477AB100A731A1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AskHafezNative4.app/AskHafezNative4";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "AskHafezNative4/AskHafezNative4-Prefix.pch";
-				INFOPLIST_FILE = "AskHafezNative4Tests/AskHafezNative4Tests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -1161,15 +1053,6 @@
 			buildConfigurations = (
 				BDF5DC3716477AB100A731A1 /* Debug */,
 				BDF5DC3816477AB100A731A1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BDF5DC3916477AB100A731A1 /* Build configuration list for PBXNativeTarget "AskHafezNative4Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDF5DC3A16477AB100A731A1 /* Debug */,
-				BDF5DC3B16477AB100A731A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

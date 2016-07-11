@@ -1,8 +1,6 @@
-FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK" "${PODS_ROOT}/Headers/Public/GoogleAnalytics-iOS-SDK" $(SDKROOT)/usr/include/libz
+HEADER_SEARCH_PATHS = $(SDKROOT)/usr/include/libz $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAnalytics-iOS-SDK"
 LIBRARY_SEARCH_PATHS = "$(PODS_ROOT)/GoogleAnalytics-iOS-SDK"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK" -isystem "${PODS_ROOT}/Headers/Public/GoogleAnalytics-iOS-SDK"
-OTHER_LDFLAGS = -ObjC -l"GoogleAnalyticsServices" -l"Pods-Google-Mobile-Ads-SDK" -l"Pods-GoogleAnalytics-iOS-SDK" -l"z" -framework "AVFoundation" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreData" -framework "CoreGraphics" -framework "CoreTelephony" -framework "EventKit" -framework "EventKitUI" -framework "GoogleMobileAds" -framework "MessageUI" -framework "StoreKit" -framework "SystemConfiguration" -weak_framework "AdSupport"
-OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/GoogleAnalytics-iOS-SDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"GoogleAnalyticsServices" -l"z" -framework "CFNetwork" -framework "CoreData" -framework "SystemConfiguration"
 PODS_ROOT = ${SRCROOT}/Pods

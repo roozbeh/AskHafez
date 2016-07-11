@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAI.h"
 
 @protocol SearchDismissPopoverDelegate <NSObject>
 -(void)searchDismissPopover:(int) ghazalNumber;
 @end
 
-@interface HafezSearchViewController : UIViewController<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface HafezSearchViewController : GAITrackedViewController<UISearchBarDelegate,UITableViewDelegate,UITableViewDataSource>
 {
     NSArray *m_resultArray;
     __unsafe_unretained id<SearchDismissPopoverDelegate> delegate;

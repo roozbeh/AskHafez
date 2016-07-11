@@ -9,7 +9,10 @@
 #import "HafezRootViewController.h"
 
 #import "HafezModelController.h"
-
+#import "GAI.h"
+#import "GAITracker.h"
+#import "GAIFields.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface HafezRootViewController ()
 @property (readonly, strong, nonatomic) HafezModelController *modelController;
@@ -34,6 +37,10 @@
     
     NSArray *viewControllers = [NSArray arrayWithObject:startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:NULL];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:[NSString stringWithFormat:@"/ipad/Ghazal-%d", ghazalNumber]];
+    [tracker send:[[GAIDictionaryBuilder createAppView] build]];
 }
 
 - (void) setRandomPage
@@ -50,10 +57,11 @@
     self.pageViewController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     self.pageViewController.delegate = self;
 
-    HafezDataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
-    
-    NSArray *viewControllers = [NSArray arrayWithObject:startingViewController];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
+    [self setSpecialPage:0];
+//    HafezDataViewController *startingViewController = [self.modelController viewControllerAtIndex:0 storyboard:self.storyboard];
+//    
+//    NSArray *viewControllers = [NSArray arrayWithObject:startingViewController];
+//    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
 
     self.pageViewController.dataSource = self.modelController;
 
@@ -86,7 +94,60 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+
+    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, 320, 50)];
+    _adBanner.delegate = self;
 }
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if (!_bannerIsVisible)
+    {
+        NSLog(@"Ad shown");
+        // If banner isn't part of view hierarchy, add it
+        if (_adBanner.superview == nil)
+        {
+            [self.view addSubview:_adBanner];
+        }
+        
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        
+        // Assumes the banner view is just off the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+        [UIView commitAnimations];
+        
+        _bannerIsVisible = YES;
+        
+        [self trackEvent:@"show"];
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"Failed to retrieve ad");
+    [self trackEvent:@"no-ad"];
+    
+    if (_bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        
+        // Assumes the banner view is placed at the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
+        
+        [UIView commitAnimations];
+        
+        _bannerIsVisible = NO;
+    }
+}
+
+- (void) trackEvent:(NSString *) eventName {
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"ads"
+                                                          action:eventName
+                                                           label:@"ghazal"
+                                                           value:nil] build]];
+}
+
 
 - (void)viewWillDisappear:(BOOL)animated
 {

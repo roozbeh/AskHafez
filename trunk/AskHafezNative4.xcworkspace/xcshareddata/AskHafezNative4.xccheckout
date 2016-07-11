@@ -6,33 +6,33 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>B773BE33-7613-410C-8824-59496EBE59FC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AskHafezNative4</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</key>
 		<string>https://darooz.unfuddle.com/svn/darooz_askhafez</string>
-		<key>F97B21670FE043F7759DA8BFADC4F19757B0689B</key>
-		<string>https://bitbucket.org/roozbeh2/askhafez.git</string>
 	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>trunk/AskHafezNative4.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</key>
-		<string>darooz_askhafez/</string>
-		<key>F97B21670FE043F7759DA8BFADC4F19757B0689B</key>
-		<string>darooz_askhafez/</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://bitbucket.org/roozbeh2/askhafez.git</string>
+	<string>https://darooz.unfuddle.com/svn/darooz_askhafez</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F97B21670FE043F7759DA8BFADC4F19757B0689B</string>
+	<string>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F97B21670FE043F7759DA8BFADC4F19757B0689B</string>
+			<string>30b092d6-c12b-4871-8a3e-7bf4bfe4f7aa</string>
 			<key>IDESourceControlWCCName</key>
 			<string>darooz_askhafez</string>
 		</dict>

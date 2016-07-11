@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GAI.h"
 
 @protocol FaalDismissPopoverDelegate <NSObject>
 -(void) faalDismissPopover;
 @end
 
-@interface FaalViewController : UIViewController
+@interface FaalViewController : GAITrackedViewController
 {
     __unsafe_unretained id<FaalDismissPopoverDelegate> delegate;
 }

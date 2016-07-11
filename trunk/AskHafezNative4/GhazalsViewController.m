@@ -10,11 +10,11 @@
 #import "GhazalsViewController.h"
 #import "CommonUtils.h"
 #import "GhazalViewController.h"
+#import <Social/Social.h>
 #import "GAIDictionaryBuilder.h"
 
 //#import "GADBannerView.h"
 //#import "GADRequest.h"
-@import GoogleMobileAds;
 
 @implementation GhazalsViewController
 
@@ -323,19 +323,6 @@
     [[self view] addSubview:srcMainBrowser];
 }
 
-- (void) initAd
-{
-    self.bannerView.adUnitID = @"ca-app-pub-3940256099942544/2934735716";//[[[NSBundle mainBundle] infoDictionary] valueForKey:@"AdMobs"];
-    
-    self.bannerView.rootViewController = self;
-    
-    GADRequest *request = [GADRequest request];
-    // Enable test ads on simulators.
-//    request.testDevices = @[ GAD_SIMULATOR_ID ];
-    [self.bannerView loadRequest:request];
-    
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -345,8 +332,6 @@
         return;
     }
  
-    [self initAd];
-    
     UIInterfaceOrientation or = [[UIDevice currentDevice] orientation];
     if (or== UIInterfaceOrientationPortrait || or == UIInterfaceOrientationPortraitUpsideDown) {
         currOrtientation = UIInterfaceOrientationPortrait;
@@ -359,11 +344,65 @@
     [self calcGhazalCnt];
     _carousel.type = iCarouselTypeCoverFlow2;
     [_carousel reloadData];
+}
 
-//    [self initScrollFrame];
-//    [self initViews];
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     
-	// Do any additional setup after loading the view, typically from a nib.
+    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, 320, 50)];
+    _adBanner.delegate = self;
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    if (!_bannerIsVisible)
+    {
+        NSLog(@"Ad shown");
+        // If banner isn't part of view hierarchy, add it
+        if (_adBanner.superview == nil)
+        {
+            [self.view addSubview:_adBanner];
+        }
+        
+        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+        
+        // Assumes the banner view is just off the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+        _bgDownConstraint.constant = 50;
+        [UIView commitAnimations];
+        
+        _bannerIsVisible = YES;
+        
+        [self trackEvent:@"show"];
+    }
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"Failed to retrieve ad");
+    [self trackEvent:@"no-ad"];
+    
+    if (_bannerIsVisible)
+    {
+        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+        
+        // Assumes the banner view is placed at the bottom of the screen.
+        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
+        
+        [UIView commitAnimations];
+        
+        _bannerIsVisible = NO;
+    }
+}
+
+- (void) trackEvent:(NSString *) eventName {
+    int ghazalNumber = _carousel.currentItemIndex;
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"ads"
+                                                          action:eventName
+                                                           label:[NSString stringWithFormat:@"ghazal-%d", ghazalNumber]
+                                                           value:nil] build]];
 }
 
 - (NSUInteger)numberOfItemsInCarousel:(iCarousel *)carousel
@@ -496,26 +535,6 @@
     sqlite3_close(m_database);
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
@@ -542,6 +561,46 @@
 //    [self initScrollFrame];
 //    [self initViews];
 
+}
+
+- (IBAction)onFacebookShare:(id)sender {
+    
+    NSMutableString *ghazalText = [[NSMutableString alloc] init];
+    
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"Faal"
+                                                          action:@"Click"
+                                                           label:@"FacebookShare2"
+                                                           value:nil] build]];
+    int ghazalNumber = _carousel.currentItemIndex;
+    NSArray *faLabelArray = [self getGhazals:ghazalNumber lang:1];
+    NSArray *enLabelArray = [self getGhazals:ghazalNumber lang:2];
+    
+    for (int i=0; i < [faLabelArray count]; i++) {
+        [ghazalText appendString:[faLabelArray objectAtIndex:i]];
+        if (i%2) {
+            [ghazalText appendString:@"\n"];
+        } else {
+            [ghazalText appendString:@" ... "];
+        }
+    }
+    
+    for (int i=0; i < [enLabelArray count]; i++) {
+        [ghazalText appendString:[enLabelArray objectAtIndex:i]];
+        if (i%2) {
+            [ghazalText appendString:@"\n"];
+        } else {
+            [ghazalText appendString:@" ... "];
+        }
+    }
+    
+    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [controller setTitle:@"Hafez Ghazal - غزل حافظ"];
+    [controller setInitialText:ghazalText];
+    [controller setInitialText:ghazalText];
+    [controller addURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/ask-hafez/id558114091?mt=8"]];
+    
+    [self presentViewController:controller animated:YES completion:Nil];
 }
 
 @end

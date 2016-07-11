@@ -12,7 +12,6 @@
 
 //#import <GADBannerView.h>
 //#import "GADRequest.h"
-@import GoogleMobileAds;
 
 @implementation FaalPhoneViewController
 @synthesize lblPersianDesc;
@@ -58,33 +57,11 @@
 /// Called when an ad request failed. Normally this is because no network connection was available
 /// or no ads were available (i.e. no fill). If the error was received as a part of the server-side
 /// auto refreshing, you can examine the hasAutoRefreshed property of the view.
-- (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error {
-    NSLog(@"didFailToReceiveAdWithError: %@", error);
-}
-
-
-- (void) initAd
-{
-    self.bannerView.adUnitID = [[[NSBundle mainBundle] infoDictionary] valueForKey:@"AdMobs"];
-    
-    self.bannerView.rootViewController = self;
-    _bannerView.delegate = self;
-    
-    GADRequest *request = [GADRequest request];
-    // Enable test ads on simulators.
-    [self.bannerView loadRequest:request];
-}
-
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     self.screenName = @"/faal";
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        // Your code to run on the main queue/thread
-            [self initAd];
-    });
     
     [self manageOrientation: [[UIDevice currentDevice] orientation]];
 	// Do any additional setup after loading the view, typically from a nib.

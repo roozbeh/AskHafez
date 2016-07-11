@@ -6,8 +6,8 @@
 //  Copyright (c) ۲۰۱۲ __MyCompanyName__. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface Ask_Hafez_iPadTests : SenTestCase
+@interface Ask_Hafez_iPadTests : XCTestCase
 
 @end

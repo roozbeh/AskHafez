@@ -10,7 +10,6 @@
 
 #import "HafezDataViewController.h"
 #import "CommonUtils.h"
-#import "GANTracker.h"
 
 /*
  A controller object that manages a simple model -- a collection of month names.
@@ -118,7 +117,7 @@
     dataViewController.rootController = [self rootController];
     m_index = index;
     
-    [[GANTracker sharedTracker] trackPageview:[NSString stringWithFormat:@"/ipad/Ghazal-%d", index] withError:nil];
+//    [[GANTracker sharedTracker] trackPageview:[NSString stringWithFormat:@"/ipad/Ghazal-%d", index] withError:nil];
     
     return dataViewController;
 }

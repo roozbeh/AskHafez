@@ -8,22 +8,6 @@
 	<string>Hafez Advise</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string>ipad_icon.png</string>
-	</array>
-	<key>CFBundleIcons</key>
-	<dict>
-		<key>CFBundlePrimaryIcon</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>ipad_icon.png</string>
-			</array>
-			<key>UIPrerenderedIcon</key>
-			<false/>
-		</dict>
-	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>com.ninjapp.hafez.ipad</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -33,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.1</string>
+	<string>1.5</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>
