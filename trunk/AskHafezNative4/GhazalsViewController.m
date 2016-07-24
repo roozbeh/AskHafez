@@ -384,52 +384,107 @@ static GhazalsViewController *gInstance = NULL;
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, 320, 50)];
-    _adBanner.delegate = self;
+
+    [self loadFacebookAd];
 }
 
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner
-{
-    if (!_bannerIsVisible)
-    {
-        NSLog(@"Ad shown");
-        // If banner isn't part of view hierarchy, add it
-        if (_adBanner.superview == nil)
-        {
-            [self.view addSubview:_adBanner];
-        }
-        
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        
-        // Assumes the banner view is just off the bottom of the screen.
-        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
-        _bgDownConstraint.constant = 50;
-        [UIView commitAnimations];
-        
-        _bannerIsVisible = YES;
-        
-        [self trackEvent:@"show"];
-    }
+- (void) loadFacebookAd {
+    // Create a banner's ad view with a unique placement ID (generate your own on the Facebook app settings).
+    // Use different ID for each ad placement in your app.
+    BOOL isIPAD = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad);
+    FBAdSize adSize = isIPAD ? kFBAdSizeHeight90Banner : kFBAdSizeHeight50Banner;
+    adView = [[FBAdView alloc] initWithPlacementID:@"1260704423969786_1260705903969638"
+                                            adSize:adSize
+                                rootViewController:self];
+    
+    // Set a delegate to get notified on changes or when the user interact with the ad.
+    adView.delegate = self;
+    
+    // When testing on a device, add its hashed ID to force test ads.
+    // The hash ID is printed to console when running on a device.
+    // [FBAdSettings addTestDevice:@"THE HASHED ID AS PRINTED TO CONSOLE"];
+    
+    // Initiate a request to load an ad.
+    [adView loadAd];
+    
+    // Reposition the adView to the bottom of the screen
+    CGSize viewSize = self.view.bounds.size;
+    CGSize tabBarSize = self.tabBarController.tabBar.frame.size;
+    viewSize = CGSizeMake(viewSize.width, viewSize.height - tabBarSize.height);
+    CGFloat bottomAlignedY = viewSize.height;
+    adView.frame = CGRectMake(0, bottomAlignedY, viewSize.width, adSize.size.height);
+    
+    // Set autoresizingMask so the rotation is automatically handled
+    adView.autoresizingMask = UIViewAutoresizingFlexibleRightMargin |
+                            UIViewAutoresizingFlexibleLeftMargin|
+                            UIViewAutoresizingFlexibleWidth |
+                            UIViewAutoresizingFlexibleTopMargin;
+    
+    // Add adView to the view hierarchy.
+    [self.view addSubview:adView];
 }
 
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+- (void)adViewDidLoad:(FBAdView *)adViewRef
 {
-    NSLog(@"Failed to retrieve ad");
-    [self trackEvent:@"no-ad"];
+    NSLog(@"Ad was loaded.");
+    // Now that the ad was loaded, show the view in case it was hidden before.
+    adView.hidden = NO;
     
-    if (_bannerIsVisible)
-    {
-        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
-        
-        // Assumes the banner view is placed at the bottom of the screen.
-        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
-        
-        [UIView commitAnimations];
-        
-        _bannerIsVisible = NO;
-    }
+    [self trackEvent:@"fb-ad-loaded"];
+    
 }
+
+- (void)adView:(FBAdView *)adViewRef didFailWithError:(NSError *)error
+{
+    NSLog(@"Ad failed to load with error: %@", error);
+    
+    // Hide the unit since no ad is shown.
+    adView.hidden = YES;
+    [self trackEvent:@"fb-ad-failed"];
+}
+
+
+//- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+//{
+//    if (!_bannerIsVisible)
+//    {
+//        NSLog(@"Ad shown");
+//        // If banner isn't part of view hierarchy, add it
+//        if (_adBanner.superview == nil)
+//        {
+//            [self.view addSubview:_adBanner];
+//        }
+//        
+//        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
+//        
+//        // Assumes the banner view is just off the bottom of the screen.
+//        banner.frame = CGRectOffset(banner.frame, 0, -banner.frame.size.height);
+//        _bgDownConstraint.constant = 50;
+//        [UIView commitAnimations];
+//        
+//        _bannerIsVisible = YES;
+//        
+//        [self trackEvent:@"show"];
+//    }
+//}
+//
+//- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+//{
+//    NSLog(@"Failed to retrieve ad");
+//    [self trackEvent:@"no-ad"];
+//    
+//    if (_bannerIsVisible)
+//    {
+//        [UIView beginAnimations:@"animateAdBannerOff" context:NULL];
+//        
+//        // Assumes the banner view is placed at the bottom of the screen.
+//        banner.frame = CGRectOffset(banner.frame, 0, banner.frame.size.height);
+//        
+//        [UIView commitAnimations];
+//        
+//        _bannerIsVisible = NO;
+//    }
+//}
 
 - (void) trackEvent:(NSString *) eventName {
     int ghazalNumber = _carousel.currentItemIndex;

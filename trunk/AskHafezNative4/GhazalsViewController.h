@@ -10,11 +10,12 @@
 #import <sqlite3.h>
 #import "iCarousel.h"
 #import "GAI.h"
-#import <iAd/iAd.h>
+
+@import FBAudienceNetwork;
 
 @class GADBannerView;
 
-@interface GhazalsViewController : GAITrackedViewController<UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate, ADBannerViewDelegate>
+@interface GhazalsViewController : GAITrackedViewController<UIScrollViewDelegate, iCarouselDataSource, iCarouselDelegate, FBAdViewDelegate>
 {
     sqlite3 *m_database;
     int m_ghzalCnt;
@@ -25,7 +26,8 @@
     
     UIInterfaceOrientation currOrtientation;
     BOOL _bannerIsVisible;
-    ADBannerView *_adBanner;
+//    ADBannerView *_adBanner;
+    FBAdView *adView;
 }
 
 //@property (strong, nonatomic) IBOutlet UIScrollView *srcMainBrowser;

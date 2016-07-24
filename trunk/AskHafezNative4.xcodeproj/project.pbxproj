@@ -28,6 +28,7 @@
 		BD14626A165855D9005BD350 /* sign_post2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD146268165855D9005BD350 /* sign_post2.gif */; };
 		BD14626B165893DF005BD350 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = BDF5DC3D16477BE800A731A1 /* button.png */; };
 		BD14626F16589434005BD350 /* FaalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD14626D16589434005BD350 /* FaalViewController.m */; };
+		BD1820371D450E7B004D7C4E /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD1820361D450E7B004D7C4E /* FBAudienceNetwork.framework */; };
 		BD2D7C3718A6A1BA007B627A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3518A6A1BA007B627A /* MainStoryboard.storyboard */; };
 		BD2D7C3918A6A1DC007B627A /* iPhoneMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3818A6A1DC007B627A /* iPhoneMainStoryboard.storyboard */; };
 		BD2D7C4018A6ACF5007B627A /* mainPageBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3F18A6ACF5007B627A /* mainPageBg.png */; };
@@ -37,7 +38,6 @@
 		BD2D7C4918A6FAAD007B627A /* facebookBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C4818A6FAAD007B627A /* facebookBtn.png */; };
 		BD2D7C4C18A7160F007B627A /* GhazalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7C4B18A7160F007B627A /* GhazalViewController.m */; };
 		BD2D7C4E18A73D76007B627A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2D7C4D18A73D76007B627A /* Social.framework */; };
-		BD3D0BD81B61D73C00540632 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3D0BD71B61D73C00540632 /* iAd.framework */; };
 		BD54AAF716487CA000E55C9C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD54AAF616487CA000E55C9C /* CFNetwork.framework */; };
 		BD56BDD31656038A006D31D7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD56BDD21656038A006D31D7 /* libsqlite3.0.dylib */; };
 		BD6BF5941A0330AC0009BC33 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5931A0330AC0009BC33 /* CoreData.framework */; };
@@ -56,7 +56,6 @@
 		BD9CD4711B61EBBE004B2B30 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5971A0330C00009BC33 /* libz.dylib */; };
 		BD9CD4721B61EBE1004B2B30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5951A0330B60009BC33 /* SystemConfiguration.framework */; };
 		BD9CD4731B61EBEF004B2B30 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5931A0330AC0009BC33 /* CoreData.framework */; };
-		BD9CD4741B61EC1C004B2B30 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3D0BD71B61D73C00540632 /* iAd.framework */; };
 		BD9CD48D1B61F9E7004B2B30 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C3A18A6A2BA007B627A /* Images.xcassets */; };
 		BDD3EDD918A9CD7300BABAE7 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BDD3EDD618A9CD7300BABAE7 /* iRate.bundle */; };
 		BDD3EDDA18A9CD7300BABAE7 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDD3EDD818A9CD7300BABAE7 /* iRate.m */; };
@@ -129,6 +128,7 @@
 		BD146268165855D9005BD350 /* sign_post2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = sign_post2.gif; path = AskHafezNative4/images/sign_post2.gif; sourceTree = "<group>"; };
 		BD14626C16589434005BD350 /* FaalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaalViewController.h; sourceTree = "<group>"; };
 		BD14626D16589434005BD350 /* FaalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FaalViewController.m; sourceTree = "<group>"; };
+		BD1820361D450E7B004D7C4E /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		BD2D7C3618A6A1BA007B627A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		BD2D7C3818A6A1DC007B627A /* iPhoneMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhoneMainStoryboard.storyboard; sourceTree = "<group>"; };
 		BD2D7C3A18A6A2BA007B627A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -141,10 +141,8 @@
 		BD2D7C4A18A7160F007B627A /* GhazalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GhazalViewController.h; sourceTree = "<group>"; };
 		BD2D7C4B18A7160F007B627A /* GhazalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GhazalViewController.m; sourceTree = "<group>"; };
 		BD2D7C4D18A73D76007B627A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		BD3D0BD71B61D73C00540632 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		BD54AAF616487CA000E55C9C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		BD56BDD21656038A006D31D7 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		BD6BF5841A032B0A0009BC33 /* libPods-Google-Mobile-Ads-SDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Google-Mobile-Ads-SDK.a"; path = "Pods/build/Debug-iphoneos/libPods-Google-Mobile-Ads-SDK.a"; sourceTree = "<group>"; };
 		BD6BF5931A0330AC0009BC33 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BD6BF5951A0330B60009BC33 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BD6BF5971A0330C00009BC33 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -198,7 +196,6 @@
 		BDF5DC5616477F2E00A731A1 /* CommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtils.h; sourceTree = "<group>"; };
 		BDF5DC5716477F2E00A731A1 /* CommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtils.m; sourceTree = "<group>"; };
 		BDF9B50F1AA15A9D00CEA7F5 /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
-		BDF9B5111AA15AAF00CEA7F5 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +203,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD9CD4741B61EC1C004B2B30 /* iAd.framework in Frameworks */,
 				BD9CD4731B61EBEF004B2B30 /* CoreData.framework in Frameworks */,
 				BD9CD4721B61EBE1004B2B30 /* SystemConfiguration.framework in Frameworks */,
 				BDE608071662BD9A00E082A3 /* CFNetwork.framework in Frameworks */,
@@ -232,11 +228,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD3D0BD81B61D73C00540632 /* iAd.framework in Frameworks */,
 				BD6BF59D1A0337CA0009BC33 /* libGoogleAnalyticsServices.a in Frameworks */,
 				BD6BF5981A0330C00009BC33 /* libz.dylib in Frameworks */,
 				BD6BF5961A0330B60009BC33 /* SystemConfiguration.framework in Frameworks */,
 				BD6BF5941A0330AC0009BC33 /* CoreData.framework in Frameworks */,
+				BD1820371D450E7B004D7C4E /* FBAudienceNetwork.framework in Frameworks */,
 				BD2D7C4E18A73D76007B627A /* Social.framework in Frameworks */,
 				BD2D7C4518A6B2F0007B627A /* QuartzCore.framework in Frameworks */,
 				BD56BDD31656038A006D31D7 /* libsqlite3.0.dylib in Frameworks */,
@@ -376,14 +372,12 @@
 		BDF5DBF816477AAE00A731A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BD3D0BD71B61D73C00540632 /* iAd.framework */,
-				BDF9B5111AA15AAF00CEA7F5 /* GoogleMobileAds.framework */,
+				BD1820361D450E7B004D7C4E /* FBAudienceNetwork.framework */,
 				BDF9B50F1AA15A9D00CEA7F5 /* Pods */,
 				BD6BF59C1A0337CA0009BC33 /* libGoogleAnalyticsServices.a */,
 				BD6BF5971A0330C00009BC33 /* libz.dylib */,
 				BD6BF5951A0330B60009BC33 /* SystemConfiguration.framework */,
 				BD6BF5931A0330AC0009BC33 /* CoreData.framework */,
-				BD6BF5841A032B0A0009BC33 /* libPods-Google-Mobile-Ads-SDK.a */,
 				BD2D7C4D18A73D76007B627A /* Social.framework */,
 				BD2D7C4418A6B2F0007B627A /* QuartzCore.framework */,
 				BD56BDD21656038A006D31D7 /* libsqlite3.0.dylib */,
@@ -974,6 +968,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AskHafezNative4/AskHafezNative4-Prefix.pch";
@@ -1010,6 +1005,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.0.0",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AskHafezNative4/AskHafezNative4-Prefix.pch";
