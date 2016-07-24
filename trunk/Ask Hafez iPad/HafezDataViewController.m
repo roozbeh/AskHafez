@@ -2,7 +2,7 @@
 //  HafezDataViewController.m
 //  Ask Hafez iPad
 //
-//  Created by Roozbeh on ۱۲/۱۱/۱۷.
+//  Created by Roozbeh on ۱۲/۱۱/۱3۷.
 //  Copyright (c) ۲۰۱۲ __MyCompanyName__. All rights reserved.
 //
 

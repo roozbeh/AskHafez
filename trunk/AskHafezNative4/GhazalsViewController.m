@@ -12,11 +12,20 @@
 #import "GhazalViewController.h"
 #import <Social/Social.h>
 #import "GAIDictionaryBuilder.h"
+#import "HafezAppDelegate.h"
+
+#import "HafezAPI.h"
 
 //#import "GADBannerView.h"
 //#import "GADRequest.h"
 
+static GhazalsViewController *gInstance = NULL;
+
 @implementation GhazalsViewController
+
++ (GhazalsViewController *) instance {
+    return(gInstance);
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -327,6 +336,8 @@
 {
     [super viewDidLoad];
     
+    gInstance = self;
+    
     if (![self loadDB]) {
         [CommonUtils alert:@"Could not load database!"];
         return;
@@ -344,6 +355,30 @@
     [self calcGhazalCnt];
     _carousel.type = iCarouselTypeCoverFlow2;
     [_carousel reloadData];
+    
+    [self checkForPushNotes];
+    
+    [self checkForSavedGhazal];
+}
+
+- (void) viewGhazal:(NSString *) ghazalNumber {
+    [_carousel scrollToItemAtIndex:[ghazalNumber integerValue] animated:YES];
+}
+
+- (void) checkForSavedGhazal
+{
+    NSLog(@"checkForSavedGhazal");
+    NSString *ghazalNumber = [[HafezAPI instance] getSetting:@"ghazalNumber"];
+    
+    if (ghazalNumber == nil) {
+        return;
+    }
+    
+    NSLog(@"checkForSavedGhazal, ghazalNumber: %@", ghazalNumber);
+    
+    [self viewGhazal:ghazalNumber];
+    
+    [[HafezAPI instance] removeSetting:@"ghazalNumber"];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -563,7 +598,7 @@
 
 }
 
-- (IBAction)onFacebookShare:(id)sender {
+- (IBAction)onss:(id)sender {
     
     NSMutableString *ghazalText = [[NSMutableString alloc] init];
     
@@ -601,6 +636,61 @@
     [controller addURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/ask-hafez/id558114091?mt=8"]];
     
     [self presentViewController:controller animated:YES completion:Nil];
+}
+
+- (void) checkForPushNotes
+{
+    NSLog(@"checkForPushNotes");
+    
+    HafezAPI *api = [HafezAPI instance];
+    NSString *pushNote = [api getSetting:@"PushNote" withDefault:@""];
+    if ([pushNote isEqualToString:@""])
+    {
+        NSLog(@"Not asked before, asking . . .");
+        [self showDailyFallRequest];
+    } else if ([pushNote isEqualToString:@"yes"]) {
+        [self enablePushNotification];
+    }
+}
+
+- (void) enablePushNotification {
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                                                    UIUserNotificationTypeBadge |
+                                                    UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
+                                                                             categories:nil];
+    
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
+
+- (void) showDailyFallRequest
+{
+    NSLog(@"showDailyFallRequest");
+    
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Daily Ghazal"
+                                                   message:@"Do you want to receive daily Ghazal of Hafez?"
+                                                  delegate:self
+                                         cancelButtonTitle:@"No"
+                                         otherButtonTitles:@"Yes",nil];
+    [alert show];
+    [[NSUserDefaults standardUserDefaults] setValue:@"YES" forKey:@"HasSeenPopup"];
+}
+
+- (void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    HafezAPI *api = [HafezAPI instance];
+
+    // 0 = Tapped yes
+    if (buttonIndex == 1)
+    {
+        [self enablePushNotification];
+        [api saveSetting:@"PushNote" withValue:@"yes"];
+        
+    } else {
+        [api saveSetting:@"PushNote" withValue:@"no"];
+    }
 }
 
 @end

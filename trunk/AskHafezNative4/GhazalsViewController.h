@@ -38,4 +38,8 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgBG;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *bgDownConstraint;
 @property (strong, nonatomic) IBOutlet UIView *viewMaster;
+
++ (GhazalsViewController *) instance;
+
+- (void) viewGhazal:(NSString *) ghazalNumber;
 @end

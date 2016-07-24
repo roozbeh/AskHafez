@@ -64,6 +64,8 @@
 		BDD3EDDF18A9E6AA00BABAE7 /* fbshare.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BDD3EDDE18A9E6AA00BABAE7 /* fbshare.jpg */; };
 		BDE608051662B36700E082A3 /* HafezSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD91931C166281F3009E472D /* HafezSearchViewController.m */; };
 		BDE608071662BD9A00E082A3 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD54AAF616487CA000E55C9C /* CFNetwork.framework */; };
+		BDEE359A1D3C21E700F35178 /* HafezAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEE35991D3C21E700F35178 /* HafezAPI.m */; };
+		BDEE359B1D3C21F000F35178 /* HafezAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEE35991D3C21E700F35178 /* HafezAPI.m */; };
 		BDF5DBFA16477AAE00A731A1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBF916477AAE00A731A1 /* UIKit.framework */; };
 		BDF5DBFC16477AAE00A731A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBFB16477AAE00A731A1 /* Foundation.framework */; };
 		BDF5DBFE16477AAE00A731A1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF5DBFD16477AAE00A731A1 /* CoreGraphics.framework */; };
@@ -158,6 +160,8 @@
 		BDD3EDDB18A9D08600BABAE7 /* GhazalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GhazalCell.h; sourceTree = "<group>"; };
 		BDD3EDDC18A9D08600BABAE7 /* GhazalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GhazalCell.m; sourceTree = "<group>"; };
 		BDD3EDDE18A9E6AA00BABAE7 /* fbshare.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = fbshare.jpg; path = AskHafezNative4/images/fbshare.jpg; sourceTree = "<group>"; };
+		BDEE35981D3C21E700F35178 /* HafezAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HafezAPI.h; sourceTree = "<group>"; };
+		BDEE35991D3C21E700F35178 /* HafezAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HafezAPI.m; sourceTree = "<group>"; };
 		BDF5DBF516477AAE00A731A1 /* AskHafezNative4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AskHafezNative4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF5DBF916477AAE00A731A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BDF5DBFB16477AAE00A731A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -326,6 +330,8 @@
 				BDF5DC5716477F2E00A731A1 /* CommonUtils.m */,
 				BDF5DC0816477AAE00A731A1 /* HafezAppDelegate.h */,
 				BDF5DC0916477AAE00A731A1 /* HafezAppDelegate.m */,
+				BDEE35981D3C21E700F35178 /* HafezAPI.h */,
+				BDEE35991D3C21E700F35178 /* HafezAPI.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -548,7 +554,12 @@
 						DevelopmentTeam = 4JE8Q22V45;
 					};
 					BDF5DBF416477AAE00A731A1 = {
-						DevelopmentTeam = 4JE8Q22V45;
+						DevelopmentTeam = JKQKJJ22L7;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -698,6 +709,7 @@
 				BD0E8ADC1657526900E3344E /* HafezRootViewController.m in Sources */,
 				BD0E8ADF1657526900E3344E /* HafezDataViewController.m in Sources */,
 				BD0E8AE21657526900E3344E /* HafezModelController.m in Sources */,
+				BDEE359B1D3C21F000F35178 /* HafezAPI.m in Sources */,
 				BD14626F16589434005BD350 /* FaalViewController.m in Sources */,
 				BDE608051662B36700E082A3 /* HafezSearchViewController.m in Sources */,
 			);
@@ -728,6 +740,7 @@
 				BDF5DC5416477D2700A731A1 /* SearchViewController.m in Sources */,
 				BD2D7C4318A6ADE1007B627A /* iCarousel.m in Sources */,
 				BDF5DC5816477F2E00A731A1 /* CommonUtils.m in Sources */,
+				BDEE359A1D3C21E700F35178 /* HafezAPI.m in Sources */,
 				BD96EFC51BE2FA6B00BE13DE /* FaalViewController.m in Sources */,
 				BD2D7C4C18A7160F007B627A /* GhazalViewController.m in Sources */,
 			);
@@ -955,8 +968,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = iPadIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -977,7 +990,7 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "713fd019-6c6b-4423-ac20-9afe19c32932";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -991,8 +1004,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = iPadIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1012,7 +1025,7 @@
 					"$(PROJECT_DIR)/GoogleAnalyticsServicesiOS_3.09",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "713fd019-6c6b-4423-ac20-9afe19c32932";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
