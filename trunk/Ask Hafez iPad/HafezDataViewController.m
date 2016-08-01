@@ -30,6 +30,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    [_btnSearch setBackgroundImage:[UIImage imageNamed:@"search_b.png"] forState:UIControlStateNormal];
 }
 
 - (void)viewDidUnload
@@ -85,7 +87,6 @@
     
     [[self view] addSubview:scrollview];
 }
-
 
 - (void)viewWillAppear:(BOOL)animated
 {

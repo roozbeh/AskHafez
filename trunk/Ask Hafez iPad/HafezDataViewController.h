@@ -10,6 +10,8 @@
 #import "FaalViewController.h"
 #import "HafezSearchViewController.h"
 
+@import FBAudienceNetwork;
+
 @interface HafezDataViewController: UIViewController <FaalDismissPopoverDelegate, SearchDismissPopoverDelegate>
 {
     UIPopoverController *m_faalPopover;
@@ -23,5 +25,7 @@
 @property (strong, nonatomic) id rootController;
 
 -(void)dismissPopover;
+@property (weak, nonatomic) IBOutlet UIButton *btnSearch;
+@property (weak, nonatomic) IBOutlet UIButton *btnFaal;
 
 @end

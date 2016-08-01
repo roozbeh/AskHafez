@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "HafezDataViewController.h"
-#import <iAd/iAd.h>
+@import FBAudienceNetwork;
 
-@interface HafezRootViewController : UIViewController <UIPageViewControllerDelegate, ADBannerViewDelegate>
+@interface HafezRootViewController : UIViewController <UIPageViewControllerDelegate, FBAdViewDelegate>
 {
-    BOOL _bannerIsVisible;
-    ADBannerView *_adBanner;
+    FBAdView *adView;
 }
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 
