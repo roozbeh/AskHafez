@@ -4,9 +4,6 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Vector;
 
-import com.google.android.apps.analytics.GoogleAnalyticsTracker;
-
-import android.app.Activity;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,8 +20,7 @@ public class SearchActivity extends GenericActivity  {
 	 EditText editText;
 	 private DataBaseHelper myDbHelper;
 	 private ListView listView;
-	 GoogleAnalyticsTracker tracker;
-	
+
 	 public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_layout);
@@ -33,22 +29,21 @@ public class SearchActivity extends GenericActivity  {
         listView = (ListView) findViewById(R.id.listView1);
         
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-        	@Override
-        	public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-        		if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-        			performSearch();
-        			return true;
-        		}
-        		return false;
-        	}
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                    performSearch();
+                    return true;
+                }
+                return false;
+            }
         });	 
         
         openDB();
 
-        tracker = GoogleAnalyticsTracker.getInstance();
-	    tracker.trackPageView("/android/search");
+        sendPageView("/android/search");
 
-         initAds();
+        initAds();
 	}
 	
 	private void openDB() {

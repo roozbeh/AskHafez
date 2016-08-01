@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/activityLayout"
     android:orientation="vertical" >
 
     <!-- Screen Design for Photos -->
@@ -20,26 +20,17 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:padding="5dip"
-        android:layout_height="0dip"
-        android:layout_weight="0.04"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
         android:text="For centuries, it has been a Persian tradition to consult Hafez when confronted with a difficult decision or choice. When used in divination, it is widely believed that Hafez’s poetry will reveal the answer to your destiny.	" />
 
     <ImageButton
         android:id="@+id/faalButton"
+        android:layout_marginTop="34dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:src="@drawable/button" />
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
-    </com.google.android.gms.ads.AdView>
-
-
-</LinearLayout>
+        android:src="@drawable/button"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

@@ -65,21 +65,27 @@ function select_all($sql) {
 	return $result;
 }
 
+function create_payload($poem, $random_ghazal_id) {
+	$message = $poem;
+	$url = "askhafez://ghazals/$random_ghazal_id";
+
+	// Create the payload body
+	$body['aps'] = array(
+	  'alert' => $message,
+	  'sound' => 'default',
+	  'link_url' => $url,
+	  );
+	
+	return $body;
+}
+
 // $deviceToken example: 'bed4ab2501851eab5a1f63b4d057d04a0ffb0fbb5134eab15abd3c6619fb6b95';
-function send_push_notification($deviceToken, $poem, $random_ghazal_id) {
-	echo "Send push note for $deviceToken, num: $random_ghazal_id\n";
+function send_push_notification_ios($deviceToken, $body) {
+	echo "Send push note for $deviceToken\n";
 	// Put your device token here (without spaces):
 
 	// Put your private key's passphrase here:
 	$passphrase = '';
-
-	$message = $poem;
-	$url = "askhafez://ghazals/$random_ghazal_id";
-
-	if (!$message || !$url)
-	    exit('Example Usage: $php newspush.php \'Breaking News!\' \'https://raywenderlich.com\'' . "\n");
-
-	////////////////////////////////////////////////////////////////////////////////
 
 	$ctx = stream_context_create();
 	stream_context_set_option($ctx, 'ssl', 'local_cert', '/home/ubuntu/askhafez/PushNote/AskHafezDistPushNote.pem');
@@ -94,13 +100,6 @@ function send_push_notification($deviceToken, $poem, $random_ghazal_id) {
 	  exit("Failed to connect: $err $errstr" . PHP_EOL);
 
 	echo 'Connected to APNS' . PHP_EOL;
-
-	// Create the payload body
-	$body['aps'] = array(
-	  'alert' => $message,
-	  'sound' => 'default',
-	  'link_url' => $url,
-	  );
 
 	// Encode the payload as JSON
 	$payload = json_encode($body);
@@ -118,6 +117,68 @@ function send_push_notification($deviceToken, $poem, $random_ghazal_id) {
 
 	// Close the connection to the server
 	fclose($fp);
+}
+
+function send_push_notification_android($deviceToken, $data)
+{
+	$ids = array($deviceToken);
+	
+    // Insert real GCM API key from the Google APIs Console
+    // https://code.google.com/apis/console/        
+    $apiKey = 'AIzaSyDQdGPQTmAgO3uwda29Wwat1zU481XLPtQ';
+
+    // Set POST request body
+    $post = array(
+                    'registration_ids'  => $ids,
+                    'data'              => $data,
+                 );
+
+    // Set CURL request headers 
+    $headers = array( 
+                        'Authorization: key=' . $apiKey,
+                        'Content-Type: application/json'
+                    );
+
+    // Initialize curl handle       
+    $ch = curl_init();
+
+    // Set URL to GCM push endpoint     
+    curl_setopt($ch, CURLOPT_URL, 'https://gcm-http.googleapis.com/gcm/send');
+
+    // Set request method to POST       
+    curl_setopt($ch, CURLOPT_POST, true);
+
+    // Set custom request headers       
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+    // Get the response back as string instead of printing it       
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    // Set JSON post data
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($post));
+
+    // Actually send the request    
+    $result = curl_exec($ch);
+
+    // Handle errors
+    if (curl_errno($ch))
+    {
+        echo 'GCM error: ' . curl_error($ch);
+		return false;
+    }
+
+    // Close curl handle
+    curl_close($ch);
+
+    $obj = json_decode($result);
+    if ($obj && $obj->success) {
+	  	echo "Message successfully delivered to $deviceToken" . PHP_EOL;
+		return true;
+    }
+
+  	echo "Message not delivered to $deviceToken" . PHP_EOL;
+
+    return false;
 }
 
 $random_ghazal_id = mt_rand(0,($ghazal_count-1));
@@ -142,10 +203,19 @@ print $fa_ghazal_1 . " " . $fa_ghazal_2;
 
 $poem = $fa_ghazal_1 . "\n" . $fa_ghazal_2;
 
+$payload = create_payload($poem, $random_ghazal_id);
+
 $result = select_all("SELECT token FROM user WHERE type = 'ios'");
 foreach ($result as $user) {
-	send_push_notification($user['token'], $poem, $random_ghazal_id);
+	send_push_notification_ios($user['token'], $payload);
 }
+
+$result = select_all("SELECT token FROM user WHERE type = 'android'");
+foreach ($result as $user) {
+	send_push_notification_android($user['token'], $payload);
+}
+
+
 
 
 

@@ -1,2 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="ApiHost">http://askhafez.ipronto.net</string>
+
+
+    <!-- dev -->
+    <!--<string name="ApiHost">http://www.tutadvclub.com</string>-->
+
+
+    <string name="SenderID">266816325051</string>
+
+    <string name="SettingsKey">com.ipronto.askhafez.settings</string>
+
+
+
+</resources>

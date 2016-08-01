@@ -5,11 +5,6 @@ import java.util.Iterator;
 import java.util.Random;
 import java.util.Vector;
 
-import com.google.android.apps.analytics.GoogleAnalyticsTracker;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,8 +26,7 @@ public class GhazalActivity extends GenericActivity {
 	private DataBaseHelper myDbHelper;
 	private HorizontalPager realViewSwitcher;
 	private int ghazal_count;
-	GoogleAnalyticsTracker tracker;
-	private int m_screen; 
+	private int m_screen;
 	
 	public GhazalActivity() {
 	}
@@ -159,9 +153,8 @@ public class GhazalActivity extends GenericActivity {
 	public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.ghazal_layout);
-        tracker = GoogleAnalyticsTracker.getInstance();
-        
-        openDB();
+
+		openDB();
         ghazal_count = myDbHelper.getGhazalCount(); 
 
 //        realViewSwitcher = new HorizontalPager(getApplicationContext());
@@ -184,12 +177,13 @@ public class GhazalActivity extends GenericActivity {
     	realViewSwitcher.removeAllViews();
 //		realViewSwitcher.addView(drawGhazal( (i + ghazal_count - 1) % ghazal_count));
 		realViewSwitcher.addView(drawGhazal(i));
-		realViewSwitcher.addView(drawGhazal((1+i) % ghazal_count));
+		realViewSwitcher.addView(drawGhazal((1 + i) % ghazal_count));
 		realViewSwitcher.setCurrentScreen(0, false);
 		m_screen = 0;
-		
-        tracker.trackPageView("/android/Ghazal" + i);
-		Log.d("GhazalActivity", "/android/Ghazal" + i);
+
+        sendPageView("/android/Ghazal" + i);
+
+        Log.d("GhazalActivity", "/android/Ghazal" + i);
 	}
 	
     public void setRandom() {
@@ -235,8 +229,8 @@ public class GhazalActivity extends GenericActivity {
 //		realViewSwitcher.addView(drawGhazal(next_number),2);
 
 
-		
-		tracker.trackPageView("/android/Ghazal" + ghazal_number);
+
+        sendPageView("/android/Ghazal" + ghazal_number);
 	}
 	
 	private final HorizontalPager.OnScreenSwitchListener onScreenSwitchListener =
@@ -263,9 +257,9 @@ public class GhazalActivity extends GenericActivity {
 			}
 			m_screen = screen;
 
-			Log.d("GhazalActivity", "/android/Ghazal" + screen);
-	        tracker.trackPageView("/android/Ghazal" + screen);
-			
+            Log.d("GhazalActivity", "/android/Ghazal" + screen);
+            sendPageView("/android/Ghazal" + screen);
+
 		}
 	};	
 
