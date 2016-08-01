@@ -38,6 +38,8 @@
 		BD2D7C4918A6FAAD007B627A /* facebookBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = BD2D7C4818A6FAAD007B627A /* facebookBtn.png */; };
 		BD2D7C4C18A7160F007B627A /* GhazalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2D7C4B18A7160F007B627A /* GhazalViewController.m */; };
 		BD2D7C4E18A73D76007B627A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2D7C4D18A73D76007B627A /* Social.framework */; };
+		BD4CF0DA1D4A2C6F0076DFD0 /* search_b.png in Resources */ = {isa = PBXBuildFile; fileRef = BD146264165853CF005BD350 /* search_b.png */; };
+		BD4CF0DB1D4A2CA80076DFD0 /* sign_post2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BD146268165855D9005BD350 /* sign_post2.gif */; };
 		BD54AAF716487CA000E55C9C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD54AAF616487CA000E55C9C /* CFNetwork.framework */; };
 		BD56BDD31656038A006D31D7 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BD56BDD21656038A006D31D7 /* libsqlite3.0.dylib */; };
 		BD6BF5941A0330AC0009BC33 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD6BF5931A0330AC0009BC33 /* CoreData.framework */; };
@@ -619,6 +621,7 @@
 				BDF5DC1E16477AAF00A731A1 /* FaalPhoneViewController.xib in Resources */,
 				BDF5DC4416477BE800A731A1 /* button.png in Resources */,
 				BD2D7C4718A6F983007B627A /* backBtn.png in Resources */,
+				BD4CF0DB1D4A2CA80076DFD0 /* sign_post2.gif in Resources */,
 				BDF5DC4716477BE800A731A1 /* dice.png in Resources */,
 				BDF5DC4816477BE800A731A1 /* ghazal_pic_portrait.png in Resources */,
 				BDD3EDD918A9CD7300BABAE7 /* iRate.bundle in Resources */,
@@ -626,6 +629,7 @@
 				BDF5DC4A16477BE800A731A1 /* search.png in Resources */,
 				BDF5DC4D16477BFB00A731A1 /* ghazals.sqlite in Resources */,
 				BDF5DC5516477D2700A731A1 /* SearchViewController.xib in Resources */,
+				BD4CF0DA1D4A2C6F0076DFD0 /* search_b.png in Resources */,
 				BD914232164789B200F5F106 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
