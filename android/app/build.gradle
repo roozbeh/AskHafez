@@ -9,8 +9,8 @@ android {
         applicationId "com.ipronto.askhafez"
         minSdkVersion 11
         targetSdkVersion 15
-        versionCode 31
-        versionName "3.0"
+        versionCode 32
+        versionName "3.1"
     }
 
     buildTypes {

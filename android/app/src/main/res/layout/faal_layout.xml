@@ -11,13 +11,15 @@
 	    android:id="@+id/faal_fa_text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:padding="5dip"
         android:gravity="right"
         android:text=""
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/faal_en_text"
+        android:layout_below="@+id/faal_fa_text"
         android:layout_width="match_parent"
         android:padding="5dip"
         android:layout_marginTop="10dp"
@@ -31,6 +33,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/button"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/faal_en_text"
         android:layout_centerHorizontal="true" />
 </RelativeLayout>
